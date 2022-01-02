@@ -1,0 +1,42 @@
+.welcome-page {
+   padding-top: 16rem;
+
+   @media (max-width: $md2) {
+      padding-top: 5.5rem;
+   }
+
+   // .welcome-page__body
+   &__body {
+      .auth-card__content {
+         .subtitle1 {
+            margin: 1rem 0 7rem 0;
+            display: block;
+         }
+
+         .btn {
+            &:not(:last-child) {
+               margin-bottom: 1.5rem;
+            }
+         }
+
+         @media (max-width: $md2) {
+            text-align: center;
+
+            .subtitle1 {
+               margin-bottom: 5rem;
+            }
+         }
+
+         @media (max-width: $md4) {
+            h2 {
+               font-size: 3.5rem;
+            }
+
+            .subtitle1 {
+               margin-bottom: 3.5rem;
+            }
+         }
+
+      }
+   }
+}

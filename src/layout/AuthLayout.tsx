@@ -20,8 +20,7 @@ export const AuthLayout: FC = () => {
                </AuthImage>
 
                <AuthAction>
-                  dsssvsvdsv
-                  {/* <Outlet/> */}
+                  <Outlet/>
                </AuthAction>
             </Auth>
           </Fullscreen>
