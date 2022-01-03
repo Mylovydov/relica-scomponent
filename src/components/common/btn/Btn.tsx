@@ -17,6 +17,7 @@ interface StyledBtnProps {
 
 // Styled
 const StyledBtn = styled.button<StyledBtnProps>`
+    cursor: ${props => props.btnVariant === 'disabled' ? 'auto' : 'pointer'};
     display: inline-flex;
     flex-direction: column;
     justify-content: center;

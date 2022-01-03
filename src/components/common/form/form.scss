@@ -1,0 +1,25 @@
+.form {
+    &__header {
+        margin-bottom: 5.6rem;
+
+        @media (max-width: $md4) {
+            margin-bottom: 4rem;
+        }
+    }
+
+    &__group {
+        position: relative;
+
+        &:not(:first-child) {
+            margin-top: 2.5rem;
+        }
+
+    }
+
+    &__footer {}
+
+    &__check {
+        display: flex;
+        justify-content: space-between;
+    }
+}

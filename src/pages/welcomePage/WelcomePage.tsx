@@ -49,7 +49,6 @@ export const WelcomePage: FC = () => {
                             children={'Create an account'}
                             btnVariant={BtnVariants.blue}
                         />
-
                     </AuthCardContent>
                 </AuthCard>
             </WelcomePageBody>

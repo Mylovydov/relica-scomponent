@@ -5,11 +5,6 @@ import styled from 'styled-components';
 
 // Styled
 const StyledAuthCardContent = styled.div`
-    span {
-        margin: 1rem 0 7rem 0;
-        display: block;
-    }
-
     button {
         &:not(:last-child) {
             margin-bottom: 1.5rem;

@@ -6,7 +6,10 @@ import styled from 'styled-components';
 
 // Styled
 const StyledWelcomePageBody = styled.div`
-
+    span {
+        margin: 1rem 0 7rem 0;
+        display: block;
+    }
 `
 
 // ComponentProps
