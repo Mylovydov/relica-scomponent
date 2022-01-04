@@ -17,13 +17,11 @@ const StyledPostPage = styled.section``
 export const PostPage: FC = () => {
     return (
         <StyledPostPage>
-            <Container>
-                <PostPageContainer>
-                    <PostPageBody>
-                        <PostPageListContainer/>
-                    </PostPageBody>
-                </PostPageContainer>
-            </Container>
+            <PostPageContainer>
+                <PostPageBody>
+                    <PostPageListContainer/>
+                </PostPageBody>
+            </PostPageContainer>
         </StyledPostPage>
     )
 }

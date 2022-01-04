@@ -10,7 +10,9 @@ const data = [
    {
       avatar: '/assets/profile.png', 
       name: 'Jessica Thorne',
-      comment: `Japanese food with my friends Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ali`
+      comment: `Japanese food with my friends Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua ali`,
+      likes: '300',
+      totalComments: '123'
    }
 ]
 

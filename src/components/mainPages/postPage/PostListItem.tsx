@@ -1,7 +1,10 @@
 import React, { FC } from 'react';
 
 import styled from 'styled-components';
+
 import { Persone } from '../../common/persone/Persone';
+import { Count } from './count/Count';
+import { PhotoSlider } from './PhotoSlider/PhotoSlider';
 
 import { PostCard } from './postCard/PostCard';
 import { PostCardBody } from './postCard/PostCardBody'
@@ -25,7 +28,9 @@ interface PostListItemProps {
    margin?: string,
    avatar: string,
    name: string,
-   comment?: string
+   comment?: string,
+   likes: string,
+   totalComments: string
 }
 
 export const PostListItem: FC<PostListItemProps> = (
@@ -33,7 +38,9 @@ export const PostListItem: FC<PostListItemProps> = (
       margin,
       avatar,
       name,
-      comment
+      comment,
+      ...props
+      
    }
    ) => {
    return (
@@ -52,11 +59,11 @@ export const PostListItem: FC<PostListItemProps> = (
                </PostCardHeader>
 
                <PostCardPhotoSlider>
-
+                  <PhotoSlider/>
                </PostCardPhotoSlider>
 
                <PostCardCount>
-
+                  <Count {...props}/>
                </PostCardCount>
 
                <PostCardFooter>

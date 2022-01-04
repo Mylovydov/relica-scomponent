@@ -6,10 +6,13 @@ import styled from 'styled-components';
 
 // Styled
 const StyledPostPageContainer = styled.div`
-   max-width: 77rem;
+   max-width: 80rem;
+   margin: 0 auto;
+   width: 100%;
+   padding: 0 1.5rem;
 `
 
-// ComponentProps
+/* ComponentProps */
 
 export const PostPageContainer: FC = (props) => {
    return <StyledPostPageContainer {...props}/>
