@@ -22,17 +22,33 @@ const StyledPostListItem = styled.li<StyledPostListItemProps>`
 
 // ComponentProps
 interface PostListItemProps {
-   margin?: string
+   margin?: string,
+   avatar: string,
+   name: string,
+   comment?: string
 }
 
-export const PostListItem: FC<PostListItemProps> = ({margin}) => {
+export const PostListItem: FC<PostListItemProps> = (
+   {
+      margin,
+      avatar,
+      name,
+      comment
+   }
+   ) => {
    return (
       <StyledPostListItem margin={margin}>
          <PostCard>
             <PostCardBody>
 
                <PostCardHeader>
-                  <Persone imagePath='/assets/profile.png'/>
+                  <Persone
+                     imagePath={avatar}
+                     innerMargin={'0 1.5rem 0 0'}
+                     personeName={name}
+                     personeSubtitle={'3 minute ago'}
+                  />
+                  <p>{comment}</p>
                </PostCardHeader>
 
                <PostCardPhotoSlider>
