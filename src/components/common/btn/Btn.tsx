@@ -85,16 +85,18 @@ const StyledBtn = styled.button<StyledBtnProps>`
 interface BtnProps {
     type?: "button" | "submit" | "reset",
     as?: 'button' | 'div',
-    btnVariant?: BtnVariants
+    btnVariant?: BtnVariants,
+    height?: string
 }
 
-export const Btn: FC<BtnProps> = ({type, as, btnVariant, children}) => {
+export const Btn: FC<BtnProps> = ({type, as, height, btnVariant, children}) => {
     return (
         <>
             <StyledBtn
                 type={type}
                 as={as}
                 btnVariant={btnVariant}
+                height={height}
             >
                 {children}
             </StyledBtn>

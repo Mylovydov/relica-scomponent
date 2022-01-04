@@ -7,9 +7,11 @@ import { WelcomePageBody } from './WelcomePageBody';
 import { AuthCard } from '../../components/authPages/auth/authCard/AuthCard';
 import { AuthCardContent } from '../../components/authPages/auth/authCard/AuthCardContent';
 
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/common/typography/Typography';
+import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/typography/Typography';
 import { Btn, BtnVariants } from '../../components/common/btn/Btn';
-import { Hidden, hiddenVariants } from '../../components/common/hidden/Hidden';
+import { Link } from 'react-router-dom';
+
+
 
 // StyledProps
 
@@ -44,11 +46,17 @@ export const WelcomePage: FC = () => {
                             How can we help you today?
                         </Typography>
 
-                        <Btn children={'Login with wallet'}/>
-                        <Btn
-                            children={'Create an account'}
-                            btnVariant={BtnVariants.blue}
-                        />
+                        <Link to={'login-with-wallet'}>
+                            <Btn children={'Login with wallet'}/>
+                        </Link>
+
+                        <Link to={'select-wallet'}>
+                            <Btn
+                                children={'Create an account'}
+                                btnVariant={BtnVariants.blue}
+                            />
+                        </Link>
+
                     </AuthCardContent>
                 </AuthCard>
             </WelcomePageBody>

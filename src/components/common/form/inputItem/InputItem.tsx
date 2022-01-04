@@ -1,7 +1,7 @@
 import React, {FC} from "react";
 import styled from "styled-components";
 
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from "../../typography/Typography";
+import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../../typography/Typography'
 import { FormGroup } from '../FormGroup'
 import { baseTheme } from "../../../../styles/theme";
 
@@ -57,7 +57,6 @@ const StyledInputItem = styled.input`
    }
 `
 
-
 // ComponentProps
 interface InputProps {
    inputAutoComplete?: string,
@@ -79,7 +78,6 @@ export const InputItem: FC<InputProps> = (
       return (
          <FormGroup>
             <StyledInputItem
-               className='input'
                autoComplete={inputAutoComplete}
                type={inpuType}
                name={inputName}

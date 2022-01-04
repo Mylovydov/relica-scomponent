@@ -6,7 +6,8 @@ import { baseTheme } from '../../../styles/theme'
 interface StyledTextProps {
    fontSize?: string,
    weigth?: number,
-   mediaFontSize?: string
+   mediaMd4FontSize?: string,
+   color?: string
 }
 
 // Styled
@@ -17,7 +18,7 @@ const StyledLogoText = styled.div<StyledTextProps>`
    font-weight: ${props => props.weigth || 700};
 
    @media (max-width: ${baseTheme.media.md4}) {
-      font-size: ${props => props.mediaFontSize || '2.5rem'};
+      font-size: ${props => props.mediaMd4FontSize || '2.5rem'};
    }
 `
 
@@ -25,14 +26,16 @@ const StyledLogoText = styled.div<StyledTextProps>`
 interface LogoTextProps {
    textFontSize?: string,
    textWeight?: number,
-   textMediaFontSize?: string,
+   mediaMd4FontSize?: string,
+   color?: string
 }
 
 export const LogoText: FC<LogoTextProps> = (
    {
       textFontSize,
       textWeight,
-      textMediaFontSize,
+      mediaMd4FontSize,
+      color,
       children
    }
    ) => {
@@ -40,7 +43,8 @@ export const LogoText: FC<LogoTextProps> = (
       <StyledLogoText
          fontSize={textFontSize}
          weigth={textWeight}
-         mediaFontSize={textMediaFontSize}
+         mediaMd4FontSize={mediaMd4FontSize}
+         color={color}
       >
          {children}
       </StyledLogoText>

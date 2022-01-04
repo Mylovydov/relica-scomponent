@@ -10,9 +10,10 @@ import { AuthCardHeader } from '../../components/authPages/auth/authCard/AuthCar
 import { AuthCardFooter } from '../../components/authPages/auth/authCard/AuthCardFooter';
 import { Hidden, hiddenVariants } from '../../components/common/hidden/Hidden';
 import { BackBtn } from '../../components/common/back-login-btn-header/BackLoginBtn';
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/common/typography/Typography';
+import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/typography/Typography';
 import { Btn } from '../../components/common/btn/Btn';
 import { SelectWalletFormContainer } from '../../containers/SelectWalletFormContainer';
+import { Link } from 'react-router-dom';
 
 
 // StyledProps
@@ -47,7 +48,9 @@ export const SelectWalletPage: FC = () => {
                 <AuthCard>
                     <Hidden mediaVisible={hiddenVariants.desktopUp}>
                         <AuthCardHeader>
-                            <BackBtn children={'Back'}/>
+                            <Link to='/auth'>
+                                <BackBtn children={'Back'}/>
+                            </Link>
                         </AuthCardHeader>
                     </Hidden>
 
@@ -65,7 +68,9 @@ export const SelectWalletPage: FC = () => {
 
                     <Hidden mediaVisible={hiddenVariants.desktopDown}>
                         <AuthCardFooter>
-                            <Btn children={'Back'}/>
+                            <Link to='/auth'>
+                                <Btn children={'Back'}/>
+                            </Link>
                         </AuthCardFooter>
                     </Hidden>
 

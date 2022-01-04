@@ -70,6 +70,9 @@ export default createGlobalStyle`
    a:hover {
       text-decoration: none;
    }
+   a {
+      display: block;
+   }
    ul li {
       list-style: none;
    }

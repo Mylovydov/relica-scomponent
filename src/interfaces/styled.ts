@@ -48,6 +48,6 @@ export interface Itheme {
 
    // z-index
    order: {
-      zindexHeader: number,
+      zIndexHeader: number,
    }
 }

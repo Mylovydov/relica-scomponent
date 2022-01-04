@@ -1,14 +1,18 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
+
 import { AuthCard } from '../../components/authPages/auth/authCard/AuthCard';
 import { AuthCardContent } from '../../components/authPages/auth/authCard/AuthCardContent';
 import { AuthCardHeader } from '../../components/authPages/auth/authCard/AuthCardHeader';
 import { BackBtn } from '../../components/common/back-login-btn-header/BackLoginBtn';
 import { Hidden, hiddenVariants } from '../../components/common/hidden/Hidden';
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/common/typography/Typography';
+import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/typography/Typography';
 import { LoginWithWalletFormContainer } from '../../containers/LoginWithWalletFormContainer';
+import { Link } from 'react-router-dom';
 
 import { LoginWithWalletPageBody } from './LoginWithWalletPageBody'
+import { AuthCardFooter } from '../../components/authPages/auth/authCard/AuthCardFooter';
+import { Btn } from '../../components/common/btn/Btn';
 
 // StyledProps
 interface StyledLoginWithWalletPageProps {
@@ -42,7 +46,9 @@ export const LoginWithWalletPage: FC = () => {
             <AuthCard>
                <Hidden mediaVisible={hiddenVariants.desktopUp}>
                   <AuthCardHeader>
-                     <BackBtn children={'Back'}/>
+                     <Link to='/auth'>
+                        <BackBtn children={'Back'}/>
+                     </Link>
                   </AuthCardHeader>
                </Hidden>
 
@@ -57,6 +63,14 @@ export const LoginWithWalletPage: FC = () => {
                   <LoginWithWalletFormContainer action='/'/>
 
                </AuthCardContent>
+
+               <Hidden mediaVisible={hiddenVariants.desktopDown}>
+                        <AuthCardFooter>
+                            <Link to='/auth'>
+                                <Btn children={'Back'}/>
+                            </Link>
+                        </AuthCardFooter>
+                    </Hidden>
             </AuthCard>
 
          </LoginWithWalletPageBody>

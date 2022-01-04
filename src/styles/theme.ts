@@ -51,6 +51,6 @@ export const baseTheme: Itheme = {
 
    // z-index
    order: {
-      zindexHeader: 50,
+      zIndexHeader: 50,
    }
 }
