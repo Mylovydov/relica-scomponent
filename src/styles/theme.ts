@@ -45,8 +45,7 @@ export const baseTheme: Itheme = {
 
    font: {
       globalFontSize: '10px',
-      fontFamily: "'Roboto', sans-serif",
-      weight: 400 | 500 | 700
+      fontFamily: "'Roboto', sans-serif"
    },
 
    // z-index

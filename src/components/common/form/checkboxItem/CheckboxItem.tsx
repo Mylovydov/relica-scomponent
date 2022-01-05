@@ -51,7 +51,7 @@ const StyledCheckboxLabel = styled.label`
         background-color:${baseTheme.colors.white};
 
         position: absolute;
-        top: 50%;
+        top: 48%;
         left: 0;
         z-index: 1;
 
@@ -70,7 +70,7 @@ const StyledCheckboxLabel = styled.label`
         opacity: 0;
 
         position: absolute;
-        top: 50%;
+        top: 48%;
         left: .4rem;
         z-index: 2;
         transform: translateY(-50%);

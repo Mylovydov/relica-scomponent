@@ -10,10 +10,10 @@ import { AuthCardFooter } from '../../components/authPages/auth/authCard/AuthCar
 import { AuthCardHeader } from '../../components/authPages/auth/authCard/AuthCardHeader'
 import { Hidden, hiddenVariants } from '../../components/common/hidden/Hidden';
 import { BackBtn } from '../../components/common/back-login-btn-header/BackLoginBtn';
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/typography/Typography';
 import { Btn } from '../../components/common/btn/Btn';
 import { UsernameFormContainer } from '../../containers/UsernameFormContainer';
 import { Link } from 'react-router-dom'
+import { StyledTitle } from '../../components/typography/Typography1'
 
 // StyledProps
 interface StyledUsernamePageProps {
@@ -39,7 +39,7 @@ const StyledUsernamePage = styled.div<StyledUsernamePageProps>`
 
 // ComponentProps
 
-export const UsernamePage = () => {
+export const UsernamePage: FC = () => {
    return (
       <StyledUsernamePage>
          <UsernamePageBody>
@@ -54,12 +54,10 @@ export const UsernamePage = () => {
                </Hidden>
 
                <AuthCardContent>
-                  <Typography
-                     variant={ClassTypographyVariants.h1}
-                     component={TagTypographyVariants.h1}
-                  >
+                  <StyledTitle>
                      Username
-                  </Typography>
+                  </StyledTitle>
+
                   <UsernameFormContainer action={'/'}/>
                </AuthCardContent>
 

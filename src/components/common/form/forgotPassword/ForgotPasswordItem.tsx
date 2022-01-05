@@ -1,7 +1,6 @@
 import React, {FC} from "react";
 import styled from "styled-components";
 
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../../typography/Typography'
 import { baseTheme } from "../../../../styles/theme";
 
 // StyledProps

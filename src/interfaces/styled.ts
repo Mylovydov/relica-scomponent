@@ -43,7 +43,6 @@ export interface Itheme {
    font: {
       globalFontSize: string,
       fontFamily: string,
-      weight: number
    },
 
    // z-index

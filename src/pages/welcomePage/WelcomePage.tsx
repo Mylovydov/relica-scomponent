@@ -7,10 +7,9 @@ import { WelcomePageBody } from './WelcomePageBody';
 import { AuthCard } from '../../components/authPages/auth/authCard/AuthCard';
 import { AuthCardContent } from '../../components/authPages/auth/authCard/AuthCardContent';
 
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/typography/Typography';
 import { Btn, BtnVariants } from '../../components/common/btn/Btn';
 import { Link } from 'react-router-dom';
-
+import { StyledTitle, StyledSubtitle } from '../../components/typography/Typography1';
 
 
 // StyledProps
@@ -32,19 +31,15 @@ export const WelcomePage: FC = () => {
             <WelcomePageBody>
                 <AuthCard>
                     <AuthCardContent>
-                        <Typography
-                            variant={ClassTypographyVariants.h1}
-                            component={TagTypographyVariants.h2}
+                        <StyledTitle
+                            as='h2'
                         >
                             Welcome,
-                        </Typography>
-
-                        <Typography 
-                            variant={ClassTypographyVariants.subtitle1}
-                            component={TagTypographyVariants.span}
-                        >
+                        </StyledTitle>
+                    
+                        <StyledSubtitle>
                             How can we help you today?
-                        </Typography>
+                        </StyledSubtitle>
 
                         <Link to={'login-with-wallet'}>
                             <Btn children={'Login with wallet'}/>

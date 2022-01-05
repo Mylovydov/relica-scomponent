@@ -10,11 +10,10 @@ import { AuthCardHeader } from '../../components/authPages/auth/authCard/AuthCar
 import { AuthCardFooter } from '../../components/authPages/auth/authCard/AuthCardFooter';
 import { Hidden, hiddenVariants } from '../../components/common/hidden/Hidden';
 import { BackBtn } from '../../components/common/back-login-btn-header/BackLoginBtn';
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/typography/Typography';
 import { Btn } from '../../components/common/btn/Btn';
 import { SelectWalletFormContainer } from '../../containers/SelectWalletFormContainer';
 import { Link } from 'react-router-dom';
-
+import { StyledTitle } from '../../components/typography/Typography1'
 
 // StyledProps
 interface StyledSelectWalletPageProps {
@@ -55,12 +54,9 @@ export const SelectWalletPage: FC = () => {
                     </Hidden>
 
                     <AuthCardContent>
-                        <Typography
-                            variant={ClassTypographyVariants.h1}
-                            component={TagTypographyVariants.h1}
-                        >
+                        <StyledTitle>
                             Select wallet
-                        </Typography>
+                        </StyledTitle>
 
                         <SelectWalletFormContainer action='/'/>
 

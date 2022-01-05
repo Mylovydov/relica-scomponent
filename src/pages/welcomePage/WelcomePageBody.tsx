@@ -6,14 +6,13 @@ import styled from 'styled-components';
 
 // Styled
 const StyledWelcomePageBody = styled.div`
-    span {
+    p {
         margin: 1rem 0 7rem 0;
         display: block;
     }
 `
 
 // ComponentProps
-
 
 export const WelcomePageBody: FC = ({ children }) => {
     return (

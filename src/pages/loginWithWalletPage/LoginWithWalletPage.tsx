@@ -6,13 +6,13 @@ import { AuthCardContent } from '../../components/authPages/auth/authCard/AuthCa
 import { AuthCardHeader } from '../../components/authPages/auth/authCard/AuthCardHeader';
 import { BackBtn } from '../../components/common/back-login-btn-header/BackLoginBtn';
 import { Hidden, hiddenVariants } from '../../components/common/hidden/Hidden';
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../components/typography/Typography';
 import { LoginWithWalletFormContainer } from '../../containers/LoginWithWalletFormContainer';
 import { Link } from 'react-router-dom';
 
 import { LoginWithWalletPageBody } from './LoginWithWalletPageBody'
 import { AuthCardFooter } from '../../components/authPages/auth/authCard/AuthCardFooter';
 import { Btn } from '../../components/common/btn/Btn';
+import { StyledTitle } from '../../components/typography/Typography1'
 
 // StyledProps
 interface StyledLoginWithWalletPageProps {
@@ -53,12 +53,10 @@ export const LoginWithWalletPage: FC = () => {
                </Hidden>
 
                <AuthCardContent>
-                  <Typography
-                     variant={ClassTypographyVariants.h1}
-                     component={TagTypographyVariants.h1}
-                  >
+                  <StyledTitle>
                      Log in with wallet
-                  </Typography>
+                  </StyledTitle>
+
 
                   <LoginWithWalletFormContainer action='/'/>
 

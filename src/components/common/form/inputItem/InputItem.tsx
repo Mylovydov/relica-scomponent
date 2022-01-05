@@ -1,10 +1,9 @@
 import React, {FC} from "react";
 import styled from "styled-components";
 
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../../typography/Typography'
 import { FormGroup } from '../FormGroup'
 import { baseTheme } from "../../../../styles/theme";
-
+import { StyledCaption } from "../../../typography/Typography1";
 // StyledProps
 
 // Styled
@@ -83,12 +82,15 @@ export const InputItem: FC<InputProps> = (
                name={inputName}
                placeholder={inputPlaceholder}
             />
-            <Typography
-               variant={ClassTypographyVariants.caption4}
-               component={TagTypographyVariants.span}
+            <StyledCaption
+               fontSize={'1.2rem'}
+               md2FontSize={'1.2rem'}
+               md3FontSize={'1.2rem'}
+               md4FontSize={'1.2rem'}
             >
                {inputLabel}
-            </Typography>
+            </StyledCaption>
+
          </FormGroup>
       )
    }

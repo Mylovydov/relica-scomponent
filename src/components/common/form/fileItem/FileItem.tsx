@@ -1,9 +1,8 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
 
-import { ClassTypographyVariants, TagTypographyVariants, Typography } from '../../../typography/Typography'
 import { baseTheme } from '../../../../styles/theme';
-
+import { StyledTitle, StyledCaption } from '../../../typography/Typography1';
 import { FormGroup } from '../FormGroup'
 
 // StyledProps
@@ -97,13 +96,6 @@ const StyledFileText = styled.div`
     padding-left: 2.5rem;
     flex: 1 1 auto;
 
-    span {
-        font-size: 2rem;
-        font-weight: 700;
-        color: ${baseTheme.colors.black};
-        line-height: 130%;
-    }
-
     p {
         margin-top: 0.7rem;
         color: #121212;
@@ -146,8 +138,26 @@ export const FileItem: FC<FileItemProps> = (
                             </StyledFileImageIcon>
                         </StyledFileImage>
                         <StyledFileText>
-                            <span>{fileInnerTitle}</span>
-                            <p>{fileInnerSubtitle}</p>
+                            <StyledTitle
+                                as='span'
+                                fontSize={'2rem'}
+                                md2FontSize={'2rem'}
+                                md3FontSize={'2rem'}
+                                md4FontSize={'2rem'}
+                            >
+                                {fileInnerTitle}
+                            </StyledTitle>
+                            <StyledCaption
+                                as={'p'}
+                                color={baseTheme.colors.secondary}
+                                fontSize={'1.2rem'}
+                                md2FontSize={'1.2rem'}
+                                md3FontSize={'1.2rem'}
+                                md4FontSize={'1.2rem'}
+                            >
+                                {fileInnerSubtitle}
+                            </StyledCaption>
+
                         </StyledFileText>
                     </StyledFileContent>
                 </StyledFileLabel>

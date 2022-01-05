@@ -17,15 +17,11 @@ const StyledAuthMainContent = styled.div<StyledAuthMainContentProps>`
    margin: ${props => props.margin || '4rem 0 0 0'};
 
    h1 {
-      font-weight: 700;
-      font-size: 4rem;
-      line-height: 132%;
       text-shadow: 0px 3px 6px #00000038;
       max-width: 49rem;
-      color: #fff;
    }
 
-   @media (max-width: ${baseTheme.media.md2}) {
+   @media (max-width: ${({ theme }) => theme.media.md2}) {
       text-align: ${props => props.textAlign || 'center'};
       margin: ${props => props.md2MediaMargin || '1.5rem auto 0'};
 
@@ -34,19 +30,11 @@ const StyledAuthMainContent = styled.div<StyledAuthMainContentProps>`
       }
    }
 
-   @media (max-width: ${baseTheme.media.md3}) {
-
-      h1 {
-         font-size: 3rem;
-      }
-   }
-
-   @media (max-width: ${baseTheme.media.md4}) {
+   @media (max-width: ${({ theme }) => theme.media.md4}) {
       margin-top: ${props => props.md4MediaMargin || '0.5rem'};
 
       h1 {
-         max-width: 30rem;
-         font-size: 2.2rem;
+         max-width: 28rem;
       }
    }
 `
