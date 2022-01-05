@@ -30,81 +30,77 @@ export const HeaderMainContainer: FC = () => {
    return (
       <Header>
          <Container>
-            <HeaderContainer>
+            <HeaderBody>
+               <HeaderLogo>
+                  <Logo
+                     imgPath={"/assets/logo.png"}
+                     textFontSize={'2.8rem'}
+                     textColor={baseTheme.colors.black}
+                     logoImgageFlex={'0 0 5rem'}
+                     logoImgMd2Flex={'0 0 5rem'}
+                     logoImgMd4Flex={'0 0 4.5rem'}
+                     logoImgageMargin={'0 1rem 0 0'}
+                  />
+               </HeaderLogo>
 
-               <HeaderBody>
-                  <HeaderLogo>
-                     <Logo
-                        imgPath={"/assets/logo.png"}
-                        textFontSize={'2.8rem'}
-                        textColor={baseTheme.colors.black}
-                        logoImgageFlex={'0 0 5rem'}
-                        logoImgMd2Flex={'0 0 5rem'}
-                        logoImgMd4Flex={'0 0 4.5rem'}
-                        logoImgageMargin={'0 1rem 0 0'}
-                     />
-                  </HeaderLogo>
+               <HeaderSearch>
+                  <SearchForm
+                     searchInputName={'"headerSearchForm"'}
+                     placeholder={'Search for users'}
+                  />
+               </HeaderSearch>
 
-                  <HeaderSearch>
-                     <SearchForm
-                        searchInputName={'"headerSearchForm"'}
-                        placeholder={'Search for users'}
-                     />
-                  </HeaderSearch>
-
-                  <HeaderActions>
-                     <ActionsHeader>
-                        <ActionsHeaderButton>
-                           <Btn
-                              children={'Make a post'}
-                              btnVariant={BtnVariants.blue}
-                              height={'2.8em'}
+               <HeaderActions>
+                  <ActionsHeader>
+                     <ActionsHeaderButton>
+                        <Btn
+                           children={'Make a post'}
+                           btnVariant={BtnVariants.blue}
+                           height={'2.8em'}
+                        />
+                     </ActionsHeaderButton>
+                     <ActionsHeaderIcons>
+                        <IconsList>
+                           <IconsItem
+                              to={'#'}
+                              imgPath={"/assets/icons/zoom.svg"}
                            />
-                        </ActionsHeaderButton>
-                        <ActionsHeaderIcons>
-                           <IconsList>
-                              <IconsItem
-                                 to={'#'}
-                                 imgPath={"/assets/icons/zoom.svg"}
-                              />
-                              <IconsItem
-                                 to={'#'}
-                                 imgPath={"/assets/icons/alarm.svg"}
-                                 notification
-                              />
-                              <IconsItem
-                                 to={'#'}
-                                 imgPath={"/assets/icons/bubble-speak.svg"}
-                                 notification
-                              />
-                           </IconsList>
-                        </ActionsHeaderIcons>
-                        <ActionsHeaderProfile>
-                           <ProfileHeader>
-                              <Avatar
-                                 imagePath={"/assets/profile.png"}
-                                 imageAlt={"profile avatar"}
-                                 width={'3.7rem'}
-                                 heigth={'3.7rem'}
-                              />
-                              <ProfileHeaderSubmenu>
-                                 <Submenu>
-                                    <SubmenuList>
-                                       <SubmenuItem to={'profile'} children={'Profile'}/>
-                                       <SubmenuItem to={'#'} children={'Settings'}/>
-                                       <SubmenuItem to={'#'} children={'Log out'}/>
-                                    </SubmenuList>
-                                 </Submenu>
-                              </ProfileHeaderSubmenu>
+                           <IconsItem
+                              to={'#'}
+                              imgPath={"/assets/icons/alarm.svg"}
+                              notification
+                           />
+                           <IconsItem
+                              to={'#'}
+                              imgPath={"/assets/icons/bubble-speak.svg"}
+                              notification
+                           />
+                        </IconsList>
+                     </ActionsHeaderIcons>
+                     <ActionsHeaderProfile>
+                        <ProfileHeader>
+                           <Avatar
+                              imagePath={"/assets/profile.png"}
+                              imageAlt={"profile avatar"}
+                              width={'3.7rem'}
+                              heigth={'3.7rem'}
+                           />
+                           <ProfileHeaderSubmenu>
+                              <Submenu>
+                                 <SubmenuList>
+                                    <SubmenuItem to={'profile'} children={'Profile'}/>
+                                    <SubmenuItem to={'#'} children={'Settings'}/>
+                                    <SubmenuItem to={'#'} children={'Log out'}/>
+                                 </SubmenuList>
+                              </Submenu>
+                           </ProfileHeaderSubmenu>
 
-                           </ProfileHeader>
-                        </ActionsHeaderProfile>
-                     </ActionsHeader>
-                  </HeaderActions>
+                        </ProfileHeader>
+                     </ActionsHeaderProfile>
+                  </ActionsHeader>
+               </HeaderActions>
 
-               </HeaderBody>
-
-            </HeaderContainer>
+            </HeaderBody>
          </Container>
       </Header>
    );
