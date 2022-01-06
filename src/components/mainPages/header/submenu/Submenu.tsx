@@ -12,6 +12,7 @@ interface StyledSubmenuProps {
 
 // Styled
 const StyledSubmenu = styled.div<StyledSubmenuProps>`
+   display: none;
    min-width: ${props => props.minWidth || '200px'};
    background-color: ${({ theme, ...props }) => props.bgColor || theme.colors.white};
    border-radius: ${props => props.brdRadius || '10px'};

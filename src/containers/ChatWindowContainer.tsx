@@ -6,6 +6,7 @@ import { ChatWindowFooter } from '../components/mainPages/chatPage/chatWindow/Ch
 import { СurrentСommunication } from '../components/mainPages/chatPage/currentСommunication/СurrentСommunication'
 import { СurrentСommunicationDate } from '../components/mainPages/chatPage/currentСommunication/СurrentСommunicationDate'
 import { СurrentСommunicationTalk } from '../components/mainPages/chatPage/currentСommunication/СurrentСommunicationTalk'
+import { СurrentСommunicationMessageList } from '../components/mainPages/chatPage/currentСommunication/СurrentСommunicationMessageList'
 
 
 export const ChatWindowContainer: FC = () => {
@@ -18,7 +19,9 @@ export const ChatWindowContainer: FC = () => {
                         currentDate={'Thursday, 12 Mar 2020'}
                     />
                     
-                    <СurrentСommunicationTalk/>
+                    <СurrentСommunicationTalk>
+                        <СurrentСommunicationMessageList />
+                    </СurrentСommunicationTalk>
                 </СurrentСommunication>
 
             </ChatWindowContent>
