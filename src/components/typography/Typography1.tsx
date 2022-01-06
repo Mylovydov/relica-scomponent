@@ -2,7 +2,7 @@ import React from 'react';
 import styled, { css } from 'styled-components';
 
 interface TypographyProps {
-    weight?: 400 | 500 | 700
+    weight?: '400' | '500' | '700' | string
     fontSize?: string,
     color?: string,
     md2FontSize?: string
@@ -16,7 +16,7 @@ const lineHeight = css`
 
 export const StyledTitleText = styled.h1<TypographyProps>`
     color: ${({ theme, ...props }) => props.color || theme.colors.black};
-    font-weight: ${({ weight = 700 }) => weight};
+    font-weight: ${({ weight = '700' }) => weight};
     font-size: ${({ fontSize = '4rem' }) => fontSize};
     ${lineHeight}
 

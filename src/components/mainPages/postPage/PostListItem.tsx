@@ -60,7 +60,7 @@ export const PostListItem: FC<PostListItemProps> = (
                      imagePath={avatar}
                      innerMargin={'0 1.5rem 0 0'}
                      personeName={name}
-                     personeSubtitle={'3 minute ago'}
+                     personeSubtitleText={'3 minute ago'}
                   />
                   <StyledBodyText>
                      {userComment}

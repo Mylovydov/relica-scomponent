@@ -81,8 +81,7 @@ export const HeaderMainContainer: FC = () => {
                            <Avatar
                               imagePath={"/assets/profile.png"}
                               imageAlt={"profile avatar"}
-                              width={'3.7rem'}
-                              heigth={'3.7rem'}
+                              imgSize={'3.7rem'}
                            />
                            <ProfileHeaderSubmenu>
                               <Submenu>

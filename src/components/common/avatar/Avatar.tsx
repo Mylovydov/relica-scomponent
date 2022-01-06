@@ -3,19 +3,19 @@ import styled from 'styled-components';
 
 // StyledProps
 interface StyledAvatarProps {
-   width?: string,
+   imgSize?: string,
    heigth?: string,
    margin?: string
 }
 
 // Styled
 const StyledAvatar = styled.div<StyledAvatarProps>`
-   width: ${({ width }) => width || '5.6rem'};
-   height: ${({ heigth }) => heigth || '5.6rem'};
+   width: ${({ imgSize }) => imgSize || '5.6rem'};
+   height: ${({ imgSize }) => imgSize || '5.6rem'};
    border-radius: 50%;
    overflow: hidden;
    position: relative;
-   margin: ${({ margin }) => margin || '0'};
+   margin: ${({ margin }) => margin || '0 1.5rem 0 0'};
 
    img {
       position: absolute;
@@ -29,8 +29,7 @@ const StyledAvatar = styled.div<StyledAvatarProps>`
 `
 // ComponentProps
 interface AvatarProps {
-   width?: string,
-   heigth?: string,
+   imgSize?: string,
    margin?: string,
    imagePath: string,
    imageAlt?: string

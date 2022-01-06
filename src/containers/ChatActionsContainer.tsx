@@ -3,14 +3,16 @@ import React, { FC } from 'react';
 
 import { ChatActions } from '../components/mainPages/chatPage/chatActions/ChatActions';
 import { ChatActionsHeader } from '../components/mainPages/chatPage/chatActions/ChatActionsHeader';
-import  { ChatActionsContent } from '../components/mainPages/chatPage/chatActions/ChatActionsContent'
+import { ChatActionsContent } from '../components/mainPages/chatPage/chatActions/ChatActionsContent'
 import { SearchForm } from '../components/common/form/searchForm/SearchForm';
 import { Contacts } from '../components/mainPages/chatPage/contacts/Contacts';
-import { ChatContactsList } from '../components/mainPages/chatPage/contacts/ChatContactsList';
+import { ContactsList } from '../components/mainPages/chatPage/contacts/ContactsList';
+
+export type UsersItem = {avatarPath: string, messageAuthorName: string, message: string, unreadMessages?: string}
 
 const users = [
    {avatarPath: "/assets/chat-avatar/chat-avatar-1.webp", messageAuthorName: "Layla Brown", message: 'Nice to meet you too!'},
-   {avatarPath: "/assets/chat-avatar/chat-avatar-2.webp", messageAuthorName: "John Smith", message: 'Nice to meet you too!', unreadMessages: '5'},
+   {avatarPath: "/assets/chat-avatar/chat-avatar-2.webp", messageAuthorName: "John Smith", message: 'Nice to meet you too! Nice to meet you too!', unreadMessages: '5'},
    {avatarPath: "/assets/chat-avatar/chat-avatar-3.webp", messageAuthorName: "Max Richardson", message: 'Nice to meet you too!', unreadMessages: '1'},
    {avatarPath: "/assets/chat-avatar/chat-avatar-4.webp", messageAuthorName: "Marcus Joans", message: 'Nice to meet you too!', unreadMessages: '45'},
    {avatarPath: "/assets/chat-avatar/chat-avatar-5.webp", messageAuthorName: "Lilly Anderson", message: 'Nice to meet you too!', unreadMessages: '9999'},
@@ -42,7 +44,7 @@ export const ChatActionsContainer: FC = () => {
          <ChatActionsContent>
 
             <Contacts>
-               <ChatContactsList/>
+               <ContactsList dataUsers={users}/>
             </Contacts>
 
          </ChatActionsContent>

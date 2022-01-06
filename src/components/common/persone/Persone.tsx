@@ -26,57 +26,92 @@ const StyledPersone = styled.div<StyledPersoneProps>`
 `
 // ComponentProps
 interface PersoneProps {
-   imagePath: string,
-   imageAlt?: string,
-   innerMargin?: string,
-   personeName: string,
-   nameFontSize?: string,
-   nameColor?: string,
-   nameWeight?: string,
-   personeSubtitle?: string,
-   subFontSize?: string,
-   subColor?: string,
+
+   // Avatar
+   imagePath: string
+   imageAlt?: string
+   innerMargin?: string
+   imgSize?: string
+
+   // Title
+   personeName: string
+   nameFontSize?: string
+   nameMd2FontSize?: string
+   nameMd3FontSize?: string
+   nameMd4FontSize?: string
+   nameColor?: string
+   nameWeight?: string
+
+   // Subtitle
+   personeSubtitleText?: string
+   subFontSize?: string
+   subMd2FontSize?: string
+   subMd3FontSize?: string
+   subMd4FontSize?: string
+   subColor?: string
    subMargin?: string
 }
 
 export const Persone: FC<PersoneProps> = (
    {
+      // Avatar
       imagePath,
+      imageAlt ='post user avatar',
       innerMargin,
+      imgSize,
+
+      // Title
       personeName,
-      personeSubtitle,
-      ...props
+      nameFontSize = '2.8rem',
+      nameMd2FontSize = '2.8rem',
+      nameMd3FontSize = '2.8rem',
+      nameMd4FontSize = '2.8rem',
+      nameColor,
+      nameWeight,
+
+      // Subtitle
+      personeSubtitleText,
+      subFontSize = '1.6rem',
+      subMd2FontSize = '1.6rem',
+      subMd3FontSize = '1.6rem',
+      subMd4FontSize = '1.6rem',
+      subColor,
+      subMargin
    }
    ) => {
    return (
-      <StyledPersone {...props}
+      <StyledPersone subMargin={subMargin}
       >
          <Avatar
             imagePath={imagePath}
-            imageAlt='post user avatar'
+            imageAlt={imageAlt}
             margin={innerMargin}
+            imgSize={imgSize}
          />
 
          <PersoneInfo>
             <StyledTitleText
                as='span'
-               fontSize={'2.8rem'}
-               md2FontSize={'2.8rem'}
-               md3FontSize={'2.8rem'}
-               md4FontSize={'2.8rem'}
+               fontSize={nameFontSize}
+               md2FontSize={nameMd2FontSize}
+               md3FontSize={nameMd3FontSize}
+               md4FontSize={nameMd4FontSize}
+               color={nameColor}
+               weight={nameWeight}
             >
                {personeName}
             </StyledTitleText>
 
-            {personeSubtitle &&
+            {personeSubtitleText &&
                <StyledCaptionText
                   as='p'
-                  fontSize={'1.6rem'}
-                  md2FontSize={'1.6rem'}
-                  md3FontSize={'1.6rem'}
-                  md4FontSize={'1.6rem'}
+                  fontSize={subFontSize}
+                  md2FontSize={subMd2FontSize}
+                  md3FontSize={subMd3FontSize}
+                  md4FontSize={subMd4FontSize}
+                  color={subColor}
                >
-                  {personeSubtitle}
+                  {personeSubtitleText}
                </StyledCaptionText>}
             
          </PersoneInfo>

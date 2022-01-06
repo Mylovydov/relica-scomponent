@@ -36,7 +36,7 @@ export const SubmenuItem: FC<SubmenuItemProps> = ({to, children}) => {
    return (
       <StyledSubmenuItem>
          <Link to={to}>
-            <StyledSubtitleText weight={400}>
+            <StyledSubtitleText weight={'400'}>
                {children}
             </StyledSubtitleText>
             </Link>

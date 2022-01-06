@@ -7,12 +7,10 @@ import styled from 'styled-components';
 // Styled
 
 // ComponentProps
-
-
-export const ChatContactsList: FC = () => {
-   return (
-      <div>
-         
-      </div>
-   );
+export const СurrentСommunicationTalk = () => {
+    return (
+        <div>
+            
+        </div>
+    );
 };
