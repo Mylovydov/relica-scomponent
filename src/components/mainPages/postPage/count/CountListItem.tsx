@@ -1,7 +1,6 @@
 import React, { FC } from 'react';
 
 import styled from 'styled-components';
-import { PostStatistics } from '../../../common/postStatistics/PostStatistics';
 
 // StyledProps
 interface StyledCountListItemProps {

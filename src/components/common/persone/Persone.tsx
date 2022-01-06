@@ -4,6 +4,7 @@ import styled from 'styled-components';
 
 import { Avatar } from '../avatar/Avatar';
 import { PersoneInfo } from './PersoneInfo';
+import { StyledTitleText, StyledCaptionText } from '../../typography/Typography1'
 
 // StyledProps
 interface StyledPersoneProps {
@@ -19,17 +20,8 @@ const StyledPersone = styled.div<StyledPersoneProps>`
    display: flex;
    align-items: center;
 
-   span {
-      font-size: ${props => props.nameFontSize || '2.8rem'};
-      font-weight: ${({ theme, ...props }) => props.nameWeight || '700'};
-      line-height: 130%;
-      color: ${({ theme, ...props }) => props.nameColor || theme.colors.black};
-   }
-
    p {
       margin: ${props => props.subMargin || '.2rem 0 0 0'};
-      color: ${({ theme, ...props }) => props.subColor || theme.colors.gray};
-      font-size: ${props => props.subFontSize || '1.6rem'};
    }
 `
 // ComponentProps
@@ -66,8 +58,26 @@ export const Persone: FC<PersoneProps> = (
          />
 
          <PersoneInfo>
-            <span>{personeName}</span>
-            {personeSubtitle && <p>{personeSubtitle}</p>}
+            <StyledTitleText
+               as='span'
+               fontSize={'2.8rem'}
+               md2FontSize={'2.8rem'}
+               md3FontSize={'2.8rem'}
+               md4FontSize={'2.8rem'}
+            >
+               {personeName}
+            </StyledTitleText>
+
+            {personeSubtitle &&
+               <StyledCaptionText
+                  as='p'
+                  fontSize={'1.6rem'}
+                  md2FontSize={'1.6rem'}
+                  md3FontSize={'1.6rem'}
+                  md4FontSize={'1.6rem'}
+               >
+                  {personeSubtitle}
+               </StyledCaptionText>}
             
          </PersoneInfo>
          

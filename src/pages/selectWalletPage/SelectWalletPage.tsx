@@ -13,7 +13,7 @@ import { BackBtn } from '../../components/common/back-login-btn-header/BackLogin
 import { Btn } from '../../components/common/btn/Btn';
 import { SelectWalletFormContainer } from '../../containers/SelectWalletFormContainer';
 import { Link } from 'react-router-dom';
-import { StyledTitle } from '../../components/typography/Typography1'
+import { StyledTitleText } from '../../components/typography/Typography1'
 
 // StyledProps
 interface StyledSelectWalletPageProps {
@@ -54,9 +54,9 @@ export const SelectWalletPage: FC = () => {
                     </Hidden>
 
                     <AuthCardContent>
-                        <StyledTitle>
+                        <StyledTitleText>
                             Select wallet
-                        </StyledTitle>
+                        </StyledTitleText>
 
                         <SelectWalletFormContainer action='/'/>
 

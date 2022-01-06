@@ -4,7 +4,6 @@ import { baseTheme } from '../styles/theme';
 
 import { Header } from '../components/mainPages/header/Header';
 import { Container } from '../components/common/container/Container';
-import { HeaderContainer } from '../components/mainPages/header/HeaderContainer';
 import { HeaderBody } from '../components/mainPages/header/HeaderBody';
 import { HeaderLogo } from '../components/mainPages/header/HeaderLogo';
 import { HeaderSearch } from '../components/mainPages/header/HeaderSearch';

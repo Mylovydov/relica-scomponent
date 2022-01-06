@@ -12,7 +12,7 @@ const StyledHeader = styled.header<StyledHeaderProps>`
    position: fixed;
    width: 100%;
    top: 0;
-   height: ${({theme, ...props}) => props.height || theme.sizes.headerHeigth};
+   height: ${({theme, ...props}) => props.height || theme.sizes.headerHeigth}rem;
    z-index: ${({ theme }) => theme.order.zIndexHeader};
 
    background-color: ${({ theme, ...props }) => props.bgColor || theme.colors.white};

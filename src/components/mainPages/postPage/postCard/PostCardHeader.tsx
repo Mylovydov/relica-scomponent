@@ -13,9 +13,6 @@ const StyledPostCardHeader = styled.div<StyledPostCardHeaderProps>`
 
    >p {
       margin-top: 3rem;
-      color: ${({ theme }) => theme.colors.black};
-      font-size: 1.6rem;
-      line-height: 130%;
    }
 `
 // ComponentProps

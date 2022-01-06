@@ -1,8 +1,6 @@
 import React, { FC } from 'react';
 import styled from 'styled-components';
-import { Btn, BtnVariants } from '../../../common/btn/Btn';
 
-import { ActionsHeaderButton } from './ActionsHeaderButton';
 // StyledProps
 // Styled
 const StyledActionsHeader = styled.div`

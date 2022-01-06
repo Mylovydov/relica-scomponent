@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import { baseTheme } from '../../../../styles/theme';
-import { StyledTitle, StyledCaption } from '../../../typography/Typography1';
+import { StyledTitleText, StyledCaptionText } from '../../../typography/Typography1';
 import { FormGroup } from '../FormGroup'
 
 // StyledProps
@@ -138,7 +138,7 @@ export const FileItem: FC<FileItemProps> = (
                             </StyledFileImageIcon>
                         </StyledFileImage>
                         <StyledFileText>
-                            <StyledTitle
+                            <StyledTitleText
                                 as='span'
                                 fontSize={'2rem'}
                                 md2FontSize={'2rem'}
@@ -146,8 +146,8 @@ export const FileItem: FC<FileItemProps> = (
                                 md4FontSize={'2rem'}
                             >
                                 {fileInnerTitle}
-                            </StyledTitle>
-                            <StyledCaption
+                            </StyledTitleText>
+                            <StyledCaptionText
                                 as={'p'}
                                 color={baseTheme.colors.secondary}
                                 fontSize={'1.2rem'}
@@ -156,7 +156,7 @@ export const FileItem: FC<FileItemProps> = (
                                 md4FontSize={'1.2rem'}
                             >
                                 {fileInnerSubtitle}
-                            </StyledCaption>
+                            </StyledCaptionText>
 
                         </StyledFileText>
                     </StyledFileContent>

@@ -6,7 +6,7 @@ import styled from 'styled-components';
 // Styled
 const StyledContent = styled.main`
    flex: 1 1 auto;
-   padding-top: ${({ theme }) => theme.sizes.headerHeigth};
+   padding-top: ${({ theme }) => theme.sizes.headerHeigth}rem;
 `
 // ComponentProps
 

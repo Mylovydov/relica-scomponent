@@ -12,7 +12,10 @@ import { PostCardCount } from './postCard/PostCardCount';
 import { PostCardFooter } from './postCard/PostCardFooter';
 import { PostCardHeader } from './postCard/PostCardHeader'
 import { PostCardPhotoSlider } from './postCard/PostCardPhotoSlider';
+import { StyledBodyText } from '../../typography/Typography1'
+import { CommentsPostContainer } from '../../../containers/CommentsPostContainer';
 
+import { postComment } from './PostsList'
 
 // StyledProps
 interface StyledPostListItemProps {
@@ -25,20 +28,24 @@ const StyledPostListItem = styled.li<StyledPostListItemProps>`
 
 // ComponentProps
 interface PostListItemProps {
-   margin?: string,
-   avatar: string,
-   name: string,
-   comment?: string,
-   likes: string,
+   margin?: string
+
+   avatar: string
+   name: string
+   userComment?: string
+   likes: string
    totalComments: string
+   postComments: postComment[]
 }
 
 export const PostListItem: FC<PostListItemProps> = (
    {
       margin,
+
       avatar,
       name,
-      comment,
+      userComment,
+      postComments,
       ...props
       
    }
@@ -55,7 +62,10 @@ export const PostListItem: FC<PostListItemProps> = (
                      personeName={name}
                      personeSubtitle={'3 minute ago'}
                   />
-                  <p>{comment}</p>
+                  <StyledBodyText>
+                     {userComment}
+                  </StyledBodyText>
+
                </PostCardHeader>
 
                <PostCardPhotoSlider>
@@ -67,7 +77,7 @@ export const PostListItem: FC<PostListItemProps> = (
                </PostCardCount>
 
                <PostCardFooter>
-
+                  <CommentsPostContainer dataComments={postComments}/>
                </PostCardFooter>
 
             </PostCardBody>

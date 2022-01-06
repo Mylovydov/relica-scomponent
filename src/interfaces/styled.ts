@@ -28,7 +28,7 @@ export interface Itheme {
 
    sizes: {
       minWidth: string,
-      headerHeigth: string,
+      headerHeigth: number,
       maxWidth: string,
       maxWidthContainer: string,
    },

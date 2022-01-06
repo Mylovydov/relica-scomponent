@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { AuthMainHead } from './AuthMainHead';
 import { AuthMainContent } from './AuthMainContent';
 import { Logo } from '../../../common/logo/Logo';
-import { StyledTitle } from '../../../typography/Typography1';
+import { StyledTitleText } from '../../../typography/Typography1';
 import { baseTheme } from '../../../../styles/theme';
 
 // StyledProps
@@ -24,13 +24,13 @@ export const AuthMain: FC = () => {
          </AuthMainHead>
 
          <AuthMainContent>
-            <StyledTitle
+            <StyledTitleText
                color={baseTheme.colors.white}
                md2FontSize={'3.5rem'}
                md4FontSize={'1.8rem'}
             >
             Post photos. Make money. Maintain ownership
-            </StyledTitle>
+            </StyledTitleText>
          </AuthMainContent>
       </StyledAuthMain>
    );

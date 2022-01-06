@@ -12,7 +12,7 @@ import { Link } from 'react-router-dom';
 import { LoginWithWalletPageBody } from './LoginWithWalletPageBody'
 import { AuthCardFooter } from '../../components/authPages/auth/authCard/AuthCardFooter';
 import { Btn } from '../../components/common/btn/Btn';
-import { StyledTitle } from '../../components/typography/Typography1'
+import { StyledTitleText } from '../../components/typography/Typography1'
 
 // StyledProps
 interface StyledLoginWithWalletPageProps {
@@ -53,9 +53,9 @@ export const LoginWithWalletPage: FC = () => {
                </Hidden>
 
                <AuthCardContent>
-                  <StyledTitle>
+                  <StyledTitleText>
                      Log in with wallet
-                  </StyledTitle>
+                  </StyledTitleText>
 
 
                   <LoginWithWalletFormContainer action='/'/>

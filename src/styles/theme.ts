@@ -1,7 +1,7 @@
 import { Itheme } from "../interfaces/styled";
 
 const maxWidthContainer = '1200px';
-const headerHeigth = '9.6rem';
+const headerHeigth = 9.6;
 
 export const baseTheme: Itheme = {
    colors: {

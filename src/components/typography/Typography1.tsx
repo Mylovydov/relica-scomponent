@@ -14,7 +14,7 @@ const lineHeight = css`
     line-height: 130%;
 `
 
-export const StyledTitle = styled.h1<TypographyProps>`
+export const StyledTitleText = styled.h1<TypographyProps>`
     color: ${({ theme, ...props }) => props.color || theme.colors.black};
     font-weight: ${({ weight = 700 }) => weight};
     font-size: ${({ fontSize = '4rem' }) => fontSize};
@@ -33,7 +33,7 @@ export const StyledTitle = styled.h1<TypographyProps>`
     }
 `
 
-export const StyledSubtitle = styled.p<TypographyProps>`
+export const StyledSubtitleText = styled.p<TypographyProps>`
     color: ${({ theme, ...props }) => props.color || theme.colors.black};
     font-weight: ${({ weight = 500 }) => weight};
     font-size: ${({ fontSize = '1.6rem' }) => fontSize};
@@ -52,7 +52,7 @@ export const StyledSubtitle = styled.p<TypographyProps>`
     }
 `
 
-export const StyledCaption = styled.span<TypographyProps>`
+export const StyledCaptionText = styled.span<TypographyProps>`
     color: ${({ theme, ...props }) => props.color || theme.colors.gray};
     font-weight: ${({ weight = 400 }) => weight};
     font-size: ${({ fontSize = '1.3rem'}) => fontSize};
@@ -71,7 +71,7 @@ export const StyledCaption = styled.span<TypographyProps>`
     }
 `
 
-export const StyledBody = styled.p<TypographyProps>`
+export const StyledBodyText = styled.p<TypographyProps>`
     color: ${({ theme, ...props }) => props.color || theme.colors.black};
     font-weight: ${({ weight = 400 }) => weight};
     font-size: ${({ fontSize = '1.6rem'}) => fontSize};
@@ -91,7 +91,7 @@ export const StyledBody = styled.p<TypographyProps>`
 `
 
 
-export const StyledLink = styled.div<TypographyProps>`
+export const StyledLinkText = styled.div<TypographyProps>`
     color: ${({ theme, ...props }) => props.color || theme.colors.primary};
     font-weight: ${({ weight = 500 }) => weight};
     font-size: ${({ fontSize = '1.6rem'}) => fontSize};

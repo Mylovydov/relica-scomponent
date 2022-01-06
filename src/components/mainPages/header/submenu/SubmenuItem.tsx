@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { StyledSubtitle } from '../../../typography/Typography1';
+import { StyledSubtitleText } from '../../../typography/Typography1';
 
 // StyledProps
 // Styled
@@ -36,9 +36,9 @@ export const SubmenuItem: FC<SubmenuItemProps> = ({to, children}) => {
    return (
       <StyledSubmenuItem>
          <Link to={to}>
-            <StyledSubtitle weight={400}>
+            <StyledSubtitleText weight={400}>
                {children}
-            </StyledSubtitle>
+            </StyledSubtitleText>
             </Link>
       </StyledSubmenuItem>
    );

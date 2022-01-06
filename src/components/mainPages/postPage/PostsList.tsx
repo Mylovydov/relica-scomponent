@@ -2,9 +2,19 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { PostListItem } from './PostListItem';
 
-type dataItem = {avatar: string, name: string, comment: string, likes: string, totalComments: string}
+export type postComment = { name: string, comment: string }
+
+type dataItem = {
+   avatar: string, 
+   name: string, 
+   userComment: string, 
+   likes: string, 
+   totalComments: string,
+   postComments: postComment[]
+}
 
 // StyledProps
+
 // Styled
 const StyledPostsList = styled.ul`
    

@@ -9,7 +9,7 @@ import { AuthCardContent } from '../../components/authPages/auth/authCard/AuthCa
 
 import { Btn, BtnVariants } from '../../components/common/btn/Btn';
 import { Link } from 'react-router-dom';
-import { StyledTitle, StyledSubtitle } from '../../components/typography/Typography1';
+import { StyledTitleText, StyledSubtitleText } from '../../components/typography/Typography1';
 
 
 // StyledProps
@@ -31,15 +31,15 @@ export const WelcomePage: FC = () => {
             <WelcomePageBody>
                 <AuthCard>
                     <AuthCardContent>
-                        <StyledTitle
+                        <StyledTitleText
                             as='h2'
                         >
                             Welcome,
-                        </StyledTitle>
+                        </StyledTitleText>
                     
-                        <StyledSubtitle>
+                        <StyledSubtitleText>
                             How can we help you today?
-                        </StyledSubtitle>
+                        </StyledSubtitleText>
 
                         <Link to={'login-with-wallet'}>
                             <Btn children={'Login with wallet'}/>

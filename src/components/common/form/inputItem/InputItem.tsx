@@ -1,13 +1,12 @@
 import React, {FC} from "react";
-import styled from "styled-components";
+import styled, {css} from "styled-components";
 
 import { FormGroup } from '../FormGroup'
 import { baseTheme } from "../../../../styles/theme";
-import { StyledCaption } from "../../../typography/Typography1";
+import { StyledCaptionText } from "../../../typography/Typography1";
 // StyledProps
 
-// Styled
-const StyledInputItem = styled.input`
+export const styledInput = css`
    font-family: inherit;
    font-size: 1.6rem;
    color: ${baseTheme.colors.black};
@@ -46,7 +45,6 @@ const StyledInputItem = styled.input`
 
    &:focus {
       &::placeholder {
-         /* color: ${baseTheme.colors.black}; */
          font-weight: 400;
       }
    }
@@ -54,6 +52,10 @@ const StyledInputItem = styled.input`
    &:focus+span {
       opacity: 1;
    }
+`
+// Styled
+export const StyledInputItem = styled.input`
+   ${styledInput}
 `
 
 // ComponentProps
@@ -82,14 +84,14 @@ export const InputItem: FC<InputProps> = (
                name={inputName}
                placeholder={inputPlaceholder}
             />
-            <StyledCaption
+            <StyledCaptionText
                fontSize={'1.2rem'}
                md2FontSize={'1.2rem'}
                md3FontSize={'1.2rem'}
                md4FontSize={'1.2rem'}
             >
                {inputLabel}
-            </StyledCaption>
+            </StyledCaptionText>
 
          </FormGroup>
       )
