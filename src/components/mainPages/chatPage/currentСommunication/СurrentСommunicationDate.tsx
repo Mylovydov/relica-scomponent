@@ -8,6 +8,7 @@ import { StyledSubtitleText } from '../../../typography/Typography1';
 // Styled
 const StyledСurrentСommunicationDate = styled.div`
     text-align: center;
+    flex: 0 0 2rem;
 `
 
 // ComponentProps

@@ -7,6 +7,7 @@ import styled from 'styled-components';
 const StyledChatWindowBody = styled.div`
     display: flex;
     flex-direction:column;
+    height: 100%;
 `
 
 // ComponentProps

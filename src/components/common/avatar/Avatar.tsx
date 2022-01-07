@@ -15,7 +15,7 @@ const StyledAvatar = styled.div<StyledAvatarProps>`
    border-radius: 50%;
    overflow: hidden;
    position: relative;
-   margin: ${({ margin }) => margin || '0 1.5rem 0 0'};
+   margin: ${({ margin }) => margin || '0'};
 
    img {
       position: absolute;
@@ -31,7 +31,7 @@ const StyledAvatar = styled.div<StyledAvatarProps>`
 interface AvatarProps {
    imgSize?: string,
    margin?: string,
-   imagePath: string,
+   imagePath?: string,
    imageAlt?: string
 }
 

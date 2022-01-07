@@ -11,13 +11,30 @@ const StyledСurrentСommunicationMessageItem = styled.li`
         margin-top: 5rem;
     }
 `
-// ComponentProps
 
-export const СurrentСommunicationMessageItem: FC = () => {
+// ComponentProps
+interface СurrentСommunicationMessageItemProps {
+    message: string
+    sendingTime: string
+    selfMessage: boolean
+    userPhoto?: string
+}
+
+export const СurrentСommunicationMessageItem: FC<СurrentСommunicationMessageItemProps> = (
+    {
+        message,
+        sendingTime,
+        selfMessage,
+        userPhoto
+    }
+) => {
     return (
         <StyledСurrentСommunicationMessageItem>
             <MessageItem
-                sendingTime='7:12am'
+                sendingTime={sendingTime}
+                userMessage={message}
+                selfMessage={selfMessage}
+                userPhoto={userPhoto}
             />
         </StyledСurrentСommunicationMessageItem>
     );

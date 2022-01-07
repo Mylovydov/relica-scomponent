@@ -10,7 +10,7 @@ const StyledChatActionsBody = styled.div`
    padding-top: 1.5rem;
    flex: 1 1 auto;
    max-height: calc(100vh - (${baseTheme.sizes.headerHeigth}rem + 1.5rem + 10rem));
-   overflow-y: scroll;
+   overflow-y: auto;
    overflow-x: hidden;
 `
 
