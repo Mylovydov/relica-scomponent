@@ -13,14 +13,6 @@ const StyledPostImage = styled.div`
     z-index: 1;
     background-color: ${({ theme }) => theme.colors.postImageHoverBg};
 
-    /* @media (any-hover:hover) { */
-
-
-                /* & +.posts-profile__count {
-                    opacity: 1;
-                } */
-            /* }
-        } */
 `
 // ComponentProps
 interface PostImageProps {

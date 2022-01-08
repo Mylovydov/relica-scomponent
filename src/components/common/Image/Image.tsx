@@ -30,13 +30,10 @@ const StyledbgImage = styled.div<StyledbgImageProps>`
     }
 
     ${({ hover }) => hover ? 
-        '@media (any-hover:hover) { &:hover { img {transform: scale(1.1); opacity: .4;}&+div { opacity: 1;}}}' : 
+        '&:hover { img {transform: scale(1.1); opacity: .4;}&+div { opacity: 1;}}' : 
         void 0
+        
     }
-
-    
-
-
 `
 // ComponentProps
 interface bgImageProps {
