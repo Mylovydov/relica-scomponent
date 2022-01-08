@@ -6,6 +6,7 @@ import styled from 'styled-components';
 interface StyledbgImageProps {
     paddingBot?: string
     minHeight?: string
+    brdRadius?: string
 }
 
 // Styled
@@ -14,6 +15,7 @@ const StyledbgImage = styled.div<StyledbgImageProps>`
     overflow: hidden;
     padding-bottom: ${({ paddingBot = '24.75%'}) => paddingBot};
     min-height: ${({ minHeight = '20rem'}) => minHeight};
+    border-radius: ${({ brdRadius = '0'}) => brdRadius};
 
     img {
         position: absolute;
@@ -31,9 +33,10 @@ interface bgImageProps {
     imgAlt?: string
     paddingBot?: string
     minHeight?: string
+    brdRadius?: string
 }
 
-export const BgImage: FC<bgImageProps> = (
+export const Image: FC<bgImageProps> = (
     {
         imgPath,
         imgAlt,

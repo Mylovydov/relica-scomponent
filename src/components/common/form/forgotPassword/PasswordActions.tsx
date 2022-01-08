@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 import { FormGroup } from '../FormGroup';
 import { CheckboxItem } from '../checkboxItem/CheckboxItem';
-import { ForgotPasswordItem } from './ForgotPasswordItem';
+import { StyledSubtitleText } from '../../../typography/Typography1';
+import { baseTheme } from '../../../../styles/theme';
 
 // StyledProps
 
@@ -13,6 +14,15 @@ const StyledPasswordActions = styled.div``
 const StyledPasswordActionsBody = styled.div`
    display: flex;
    justify-content: space-between;
+
+   span {
+      transition: all 0.2s linear;
+      cursor: pointer;
+
+      &:hover {
+         color: ${baseTheme.colors.primaryDarken};
+      }
+   }
 `
 
 
@@ -45,8 +55,14 @@ export const PasswordActions: FC<PasswordActionsProps> = (
                   checkboxName={checkboxName}
                   children={checkboxText} 
                />
-               <ForgotPasswordItem children={forgotLinkText}/>
-               
+
+               <StyledSubtitleText
+                  as='span'
+                  color={baseTheme.colors.primary}
+                  weight='500'
+               >
+                  {forgotLinkText}
+               </StyledSubtitleText>
             </StyledPasswordActionsBody>
          </StyledPasswordActions>
       </FormGroup>

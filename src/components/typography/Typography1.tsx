@@ -89,23 +89,3 @@ export const StyledBodyText = styled.p<TypographyProps>`
         font-size: ${({ md4FontSize = '1.6rem'}) => md4FontSize};
     }
 `
-
-
-export const StyledLinkText = styled.div<TypographyProps>`
-    color: ${({ theme, ...props }) => props.color || theme.colors.primary};
-    font-weight: ${({ weight = 500 }) => weight};
-    font-size: ${({ fontSize = '1.6rem'}) => fontSize};
-    ${lineHeight}
-
-    @media (max-width: ${({ theme }) => theme.media.md2}) {
-        font-size: ${({ md2FontSize = '1.6rem'}) => md2FontSize};
-    }
-
-    @media (max-width: ${({ theme }) => theme.media.md3}) {
-        font-size: ${({ md3FontSize = '1.6rem'}) => md3FontSize};
-    }
-
-    @media (max-width: ${({ theme }) => theme.media.md4}) {
-        font-size: ${({ md4FontSize = '1.6rem'}) => md4FontSize};
-    }
-`
