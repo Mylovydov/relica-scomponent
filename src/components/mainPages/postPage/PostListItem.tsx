@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import { Persone } from '../../common/persone/Persone';
-import { Count } from './count/Count';
+import { Count } from '../../common/count/Count';
 import { PhotoSlider } from './PhotoSlider/PhotoSlider';
 
 import { PostCard } from './postCard/PostCard';

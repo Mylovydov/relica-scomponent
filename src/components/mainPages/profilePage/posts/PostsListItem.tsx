@@ -8,7 +8,8 @@ import { PostImage } from '../../../common/postImage/PostImage';
 
 // Styled
 const StyledPostsListItem = styled.li`
-
+    border-radius: 1rem;
+    overflow: hidden;
 `
 // ComponentProps
 interface UserPostsListItemProps {
@@ -18,14 +19,18 @@ interface UserPostsListItemProps {
 }
 export const UserPostsListItem: FC<UserPostsListItemProps> = (
     {
-        postImage
+        postImage,
+        postTotalLikes,
+        postTotalComments
     }
 ) => {
     return (
-        <li>
+        <StyledPostsListItem>
             <PostImage
                 imgPath={postImage}
+                postTotalLikes={postTotalLikes}
+                postTotalComments={postTotalComments}
             />
-        </li>
+        </StyledPostsListItem>
     );
 };

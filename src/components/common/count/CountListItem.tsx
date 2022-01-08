@@ -9,7 +9,7 @@ interface StyledCountListItemProps {
 // Styled
 const StyledCountListItem = styled.li<StyledCountListItemProps>`
     &:not(:last-child) {
-        margin: ${({ margin }) => margin || '0 3.5rem 0 0'};
+        margin: ${({ margin = '0 5rem 0 0'}) => margin};
     }
 `
 

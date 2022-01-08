@@ -11,10 +11,6 @@ const StyledCountList = styled.ul`
 // ComponentProps
 
 
-export const CountList: FC = ({children}) => {
-    return (
-        <StyledCountList>
-            {children}
-        </StyledCountList>
-    );
+export const CountList: FC = (props) => {
+    return <StyledCountList {...props}/>
 };

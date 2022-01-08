@@ -7,6 +7,7 @@ interface StyledbgImageProps {
     paddingBot?: string
     minHeight?: string
     brdRadius?: string
+    hover?: boolean
 }
 
 // Styled
@@ -25,7 +26,17 @@ const StyledbgImage = styled.div<StyledbgImageProps>`
         height: 100%;
         object-fit: cover;
         z-index: 1;
+        transition: all 0.2s linear;
     }
+
+    ${({ hover }) => hover ? 
+        '@media (any-hover:hover) { &:hover { img {transform: scale(1.1); opacity: .4;}&+div { opacity: 1;}}}' : 
+        void 0
+    }
+
+    
+
+
 `
 // ComponentProps
 interface bgImageProps {
@@ -34,6 +45,7 @@ interface bgImageProps {
     paddingBot?: string
     minHeight?: string
     brdRadius?: string
+    hover?: boolean
 }
 
 export const Image: FC<bgImageProps> = (

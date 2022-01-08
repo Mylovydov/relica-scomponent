@@ -34,14 +34,14 @@ const profileData = {
     totalFollowing: '545',
     userPosts: [
         { postImage: '/assets/post-image/post-img-3.webp', postTotalLikes: '124', postTotalComments: '15'},
-        { postImage: '/assets/post-image/post-img-4.webp', postTotalLikes: '124', postTotalComments: '15'},
-        { postImage: '/assets/post-image/post-img-5.webp', postTotalLikes: '124', postTotalComments: '15'},
-        { postImage: '/assets/post-image/post-img-6.webp', postTotalLikes: '124', postTotalComments: '15'},
-        { postImage: '/assets/post-image/post-img-7.webp', postTotalLikes: '124', postTotalComments: '15'},
-        { postImage: '/assets/post-image/post-img-8.webp', postTotalLikes: '124', postTotalComments: '15'},
-        { postImage: '/assets/post-image/post-img-9.webp', postTotalLikes: '124', postTotalComments: '15'},
-        { postImage: '/assets/post-image/post-img-10.webp', postTotalLikes: '124', postTotalComments: '15'},
-        { postImage: '/assets/post-image/post-img-11.webp', postTotalLikes: '124', postTotalComments: '15'},
+        { postImage: '/assets/post-image/post-img-4.png', postTotalLikes: '124', postTotalComments: '15'},
+        { postImage: '/assets/post-image/post-img-5.png', postTotalLikes: '435', postTotalComments: '55'},
+        { postImage: '/assets/post-image/post-img-6.jpg', postTotalLikes: '23', postTotalComments: '56'},
+        { postImage: '/assets/post-image/post-img-7.png', postTotalLikes: '356', postTotalComments: '65646'},
+        { postImage: '/assets/post-image/post-img-8.png', postTotalLikes: '434', postTotalComments: '555'},
+        { postImage: '/assets/post-image/post-img-9.png', postTotalLikes: '3', postTotalComments: '44'},
+        { postImage: '/assets/post-image/post-img-10.png', postTotalLikes: '1254', postTotalComments: '5'},
+        { postImage: '/assets/post-image/post-img-11.png', postTotalLikes: '454', postTotalComments: '16665'},
     ]
 }
 
@@ -121,6 +121,10 @@ export const ProfilePageContainer: FC = () => {
                                                 <StyledTitleText
                                                     as='div'
                                                     fontSize='2rem'
+                                                    md2FontSize={'2rem'}
+                                                    md3FontSize={'2rem'}
+                                                    md4FontSize={'2rem'}
+                                                    
                                                 >
                                                     {totalPosts}
                                                 </StyledTitleText>
@@ -134,6 +138,9 @@ export const ProfilePageContainer: FC = () => {
                                                 <StyledTitleText
                                                     as='div'
                                                     fontSize='2rem'
+                                                    md2FontSize={'2rem'}
+                                                    md3FontSize={'2rem'}
+                                                    md4FontSize={'2rem'}
                                                 >
                                                     {totalFollowers}
                                                 </StyledTitleText>
@@ -147,6 +154,9 @@ export const ProfilePageContainer: FC = () => {
                                                 <StyledTitleText
                                                     as='div'
                                                     fontSize='2rem'
+                                                    md2FontSize={'2rem'}
+                                                    md3FontSize={'2rem'}
+                                                    md4FontSize={'2rem'}
                                                 >
                                                     {totalFollowing}
                                                 </StyledTitleText>

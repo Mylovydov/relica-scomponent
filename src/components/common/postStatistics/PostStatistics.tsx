@@ -13,16 +13,10 @@ const StyledPostStatistics = styled.div`
     align-items: center;
 `
 // ComponentProps
-interface PostStatisticsProps {
-    iconPath: string,
-    children: string
-}
+// interface PostStatisticsProps {
+//     iconPath: string,
+// }
 
-export const PostStatistics: FC<PostStatisticsProps> = ({ iconPath, children }) => {
-    return (
-        <StyledPostStatistics>
-            <PostStatisticsIcon iconPath={iconPath}/>
-            <PostStatisticsActivity children={children}/>
-        </StyledPostStatistics>
-    );
+export const PostStatistics: FC = (props) => {
+    return <StyledPostStatistics {...props} />
 };
