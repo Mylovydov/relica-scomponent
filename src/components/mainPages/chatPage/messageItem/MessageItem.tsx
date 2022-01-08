@@ -55,6 +55,7 @@ export const MessageItem: FC<MessageItemProps> = (
                 <Avatar
                     imagePath={userPhoto}
                     imgSize='4rem'
+                    margin={'0 1.5rem 0 0'}
                 />
             }
 

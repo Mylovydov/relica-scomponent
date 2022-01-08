@@ -6,6 +6,7 @@ interface StyledAvatarProps {
    imgSize?: string,
    heigth?: string,
    margin?: string
+   border?: string
 }
 
 // Styled
@@ -16,6 +17,7 @@ const StyledAvatar = styled.div<StyledAvatarProps>`
    overflow: hidden;
    position: relative;
    margin: ${({ margin }) => margin || '0'};
+   border: ${({ border = 'none'}) => border};
 
    img {
       position: absolute;
@@ -33,6 +35,7 @@ interface AvatarProps {
    margin?: string,
    imagePath?: string,
    imageAlt?: string
+   border?: string
 }
 
 export const Avatar: FC<AvatarProps> = ({ imagePath, imageAlt, ...props }) => {

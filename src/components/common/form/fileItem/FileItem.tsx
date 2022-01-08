@@ -4,46 +4,17 @@ import styled from 'styled-components';
 import { baseTheme } from '../../../../styles/theme';
 import { StyledTitleText, StyledCaptionText } from '../../../typography/Typography1';
 import { FormGroup } from '../FormGroup'
+import { FileInput } from './FileInput'
+import { FileLabel } from './FileLabel';
 
 // StyledProps
+
 
 // Styled
 const StyledFileItem = styled.div`
     position: relative;
 `
 
-const StyledFileInput = styled.input`
-    position: absolute;
-    overflow: hidden;
-    opacity: 0;
-    z-index: -1;
-    width: 0.1px;
-    height: 0.1px;
-
-    transition: all .2s linear;
-`
-
-const StyledFileLabel = styled.label`
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-
-    height: 11.2rem;
-    width: 100%;
-    border: .1rem solid #DBDBDB;
-    border-radius: 1rem;
-
-    transition: all .2s linear;
-
-    &:hover {
-        border: 1px solid #10A5F52F;
-        background-color: #F0F9FD;
-    }
-
-    @media (max-width: ${baseTheme.media.md4}) {
-        height: 7.5rem;
-    }
-`
 
 const StyledFileContent = styled.div`
     display: flex;
@@ -111,9 +82,9 @@ interface FileItemProps {
     fileInputId: string
     fileInputFor: string
     fileImg: string
-    fileImgAlt: string
-    fileInnerTitle: string
-    fileInnerSubtitle: string
+    fileImgAlt?: string
+    fileInnerTitle?: string
+    fileInnerSubtitle?: string
 }
 
 export const FileItem: FC<FileItemProps> = (
@@ -129,8 +100,10 @@ export const FileItem: FC<FileItemProps> = (
     return (
         <FormGroup>
             <StyledFileItem>
-                <StyledFileInput type="file" id={fileInputId} />
-                <StyledFileLabel htmlFor={fileInputFor}>
+                <FileInput fileInputId={fileInputId} />
+                <FileLabel
+                    htmlFor={fileInputFor}
+                >
                     <StyledFileContent>
                         <StyledFileImage>
                             <StyledFileImageIcon>
@@ -160,7 +133,7 @@ export const FileItem: FC<FileItemProps> = (
 
                         </StyledFileText>
                     </StyledFileContent>
-                </StyledFileLabel>
+                </FileLabel>
             </StyledFileItem>
         </FormGroup>
     )

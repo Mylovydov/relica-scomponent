@@ -1,26 +1,18 @@
 import React, { FC } from 'react';
 
-import styled from 'styled-components';
-
 import { PostPageBody } from './PostPageBody';
-import { PostPageContainer } from './PostPageContainer';
 import { PostPageListContainer } from '../../containers/PostPageListContainer';
+import { ContainerHelper } from '../../components/common/containerHelper/ContainerHelper';
 
-// StyledProps
-
-// Styled
-const StyledPostPage = styled.section``
-
-// ComponentProps
 
 export const PostPage: FC = () => {
     return (
-        <StyledPostPage>
-            <PostPageContainer>
+        <section>
+            <ContainerHelper>
                 <PostPageBody>
                     <PostPageListContainer/>
                 </PostPageBody>
-            </PostPageContainer>
-        </StyledPostPage>
+            </ContainerHelper>
+        </section>
     )
 }

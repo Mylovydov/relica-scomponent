@@ -57,7 +57,7 @@ export const Persone: FC<PersoneProps> = (
       // Avatar
       imagePath,
       imageAlt ='post user avatar',
-      innerMargin,
+      innerMargin = '1.5rem',
       imgSize,
 
       // Title
