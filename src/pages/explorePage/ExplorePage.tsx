@@ -2,7 +2,7 @@ import React, { FC } from 'react';
 
 import { ContainerHelper100 } from '../../components/common/containerHelper/ContainerHelper100';
 import { StyledTitleText } from '../../components/typography/Typography1';
-import { TabsContainer } from '../../containers/TabsContainer';
+import { ExplorePageTabsContainer } from '../../containers/ExplorePageTabsContainer';
 import { ExplorePageBody } from './ExplorePageBody';
 import { ExplorePageTabs } from './ExplorePageTabs';
 
@@ -22,7 +22,7 @@ export const ExplorePage: FC = () => {
                     </StyledTitleText>
 
                     <ExplorePageTabs>
-                        <TabsContainer />
+                        <ExplorePageTabsContainer />
                     </ExplorePageTabs>
                 </ExplorePageBody>
             </ContainerHelper100>

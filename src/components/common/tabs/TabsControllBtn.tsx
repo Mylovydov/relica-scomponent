@@ -33,15 +33,24 @@ const StyledTabsControllBtn = styled.button<StyledTabsControllBtnProps>`
             width: 100%;
         }
     }
+
+    /* .tabs-btn-active {
+        color: ${({ theme }) => theme.colors.primary};
+        &:after {
+            background-color: ${({ theme }) => theme.colors.primary};
+            width: 100%;
+        }
+    } */
 `
 // ComponentProps
 interface TabsControllBtnProps {
     btnText: string 
+    flex?: string
 }
 
-export const TabsControllBtn: FC<TabsControllBtnProps> = ({btnText}) => {
+export const TabsControllBtn: FC<TabsControllBtnProps> = ({btnText, ...props}) => {
     return (
-        <StyledTabsControllBtn>
+        <StyledTabsControllBtn {...props}>
             <StyledSubtitleText
                 color={baseTheme.colors.gray}
             >

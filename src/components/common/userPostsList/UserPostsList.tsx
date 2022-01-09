@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 
 import styled from 'styled-components';
-import { UserPostsListItem } from './PostsListItem';
-import { userPost } from '../../../../containers/ProfilePageContainer';
+import { UserPostsListItem } from './UserPostsListItem'
+import { userPost } from '../../../containers/ProfilePageContainer';
 // StyledProps
 
 // Styled
@@ -17,7 +17,6 @@ interface PostsListProps {
 }
 
 export const UserPostsList: FC<PostsListProps> = ({ data }) => {
-    console.log(data);
     
     const posts = data?.map((post, i) => {
         return <UserPostsListItem {...post} key={i}/>

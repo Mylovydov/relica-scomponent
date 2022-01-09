@@ -21,7 +21,7 @@ import { StatisticsList } from '../components/mainPages/profilePage/statistics/S
 import { StatisticsListItem } from '../components/mainPages/profilePage/statistics/StatisticsListItem';
 import { Posts } from '../components/mainPages/profilePage/posts/Posts';
 import { PostsContainer } from '../components/mainPages/profilePage/posts/PostsContainer';
-import { UserPostsList } from '../components/mainPages/profilePage/posts/UserPostsList'; 
+import { UserPostsList } from '../components/common/userPostsList/UserPostsList'; 
 
 export type userPost = {postImage: string, postTotalLikes: string, postTotalComments: string}
 

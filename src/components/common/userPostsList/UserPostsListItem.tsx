@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import styled from 'styled-components';
-import { PostImage } from '../../../common/postImage/PostImage';
+import { PostImage } from '../postImage/PostImage';
 
 
 // StyledProps
