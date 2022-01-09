@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 
 // StyledProps
-interface StyledbgImageProps {
+interface StyledImageItemProps {
     paddingBot?: string
     minHeight?: string
     brdRadius?: string
@@ -11,10 +11,10 @@ interface StyledbgImageProps {
 }
 
 // Styled
-const StyledbgImage = styled.div<StyledbgImageProps>`
+const StyledImageItem = styled.div<StyledImageItemProps>`
     position: relative;
     overflow: hidden;
-    padding-bottom: ${({ paddingBot = '24.75%'}) => paddingBot};
+    padding-bottom: ${({ paddingBot = '18.05%'}) => paddingBot};
     min-height: ${({ minHeight = '20rem'}) => minHeight};
     border-radius: ${({ brdRadius = '0'}) => brdRadius};
 
@@ -36,7 +36,7 @@ const StyledbgImage = styled.div<StyledbgImageProps>`
     }
 `
 // ComponentProps
-interface bgImageProps {
+interface ImageItemProps {
     imgPath: string
     imgAlt?: string
     paddingBot?: string
@@ -45,7 +45,7 @@ interface bgImageProps {
     hover?: boolean
 }
 
-export const Image: FC<bgImageProps> = (
+export const ImageItem: FC<ImageItemProps> = (
     {
         imgPath,
         imgAlt,
@@ -53,8 +53,8 @@ export const Image: FC<bgImageProps> = (
     }
 ) => {
     return (
-        <StyledbgImage {...props}>
+        <StyledImageItem {...props}>
             <img src={imgPath} alt={imgAlt} />
-        </StyledbgImage>
+        </StyledImageItem>
     );
 };

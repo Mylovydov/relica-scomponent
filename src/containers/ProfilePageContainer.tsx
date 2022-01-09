@@ -1,7 +1,8 @@
 import React, { FC } from 'react';
+
 import { Avatar } from '../components/common/avatar/Avatar';
-import { Image } from '../components/common/Image/Image';
-import { ContainerHelper } from '../components/common/containerHelper/ContainerHelper';
+import { ImageItem } from '../components/common/Image/ImageItem';
+import { ContainerHelper80 } from '../components/common/containerHelper/ContainerHelper80';
 import { UserInfo } from '../components/mainPages/profilePage/userInfo/UserInfo';
 import { UserInfoAvatar } from '../components/mainPages/profilePage/userInfo/UserInfoAvatar';
 import { UserInfoBody } from '../components/mainPages/profilePage/userInfo/UserInfoBody';
@@ -62,13 +63,13 @@ export const ProfilePageContainer: FC = () => {
     return (
         <ProfilePage>
             <ProfilePageHeader>
-                <Image imgPath={bgImage}/>
+                <ImageItem imgPath={bgImage}/>
             </ProfilePageHeader>
 
             <ProfilePageContent>
                 <ProfilePageUserInfo>
                     <UserInfo>
-                        <ContainerHelper>
+                        <ContainerHelper80>
                             <UserInfoBody>
 
                                 <UserInfoAvatar>
@@ -172,7 +173,7 @@ export const ProfilePageContainer: FC = () => {
                                 </UserInfoStatistics>
 
                             </UserInfoBody>
-                        </ContainerHelper>
+                        </ContainerHelper80>
                     </UserInfo>
                 </ProfilePageUserInfo>
 

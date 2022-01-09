@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { baseTheme } from '../../../styles/theme';
 import { Count } from '../count/Count';
-import { Image } from '../Image/Image';
+import { ImageItem } from '../Image/ImageItem';
 import { PostImageStatistics } from './PostImageStatistics';
 
 // StyledProps
@@ -30,7 +30,7 @@ export const PostImage: FC<PostImageProps> = (
 ) => {
     return (
         <StyledPostImage>
-            <Image 
+            <ImageItem 
                 imgPath={imgPath}
                 paddingBot={'99.85%'}
                 hover

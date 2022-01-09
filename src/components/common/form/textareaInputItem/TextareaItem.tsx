@@ -21,7 +21,7 @@ interface TextareaItemProps {
 
 export const TextareaItem: FC<TextareaItemProps> = ({inputName, ...placeholder}) => {
    return (
-      <FormGroup mTop={'3.5rem'}>
+      <FormGroup>
          <StyledTextareaItem name={inputName} {...placeholder} />
       </FormGroup>
    );

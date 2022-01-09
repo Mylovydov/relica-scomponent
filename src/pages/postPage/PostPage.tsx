@@ -2,17 +2,17 @@ import React, { FC } from 'react';
 
 import { PostPageBody } from './PostPageBody';
 import { PostPageListContainer } from '../../containers/PostPageListContainer';
-import { ContainerHelper } from '../../components/common/containerHelper/ContainerHelper';
+import { ContainerHelper80 } from '../../components/common/containerHelper/ContainerHelper80';
 
 
 export const PostPage: FC = () => {
     return (
         <section>
-            <ContainerHelper>
+            <ContainerHelper80>
                 <PostPageBody>
                     <PostPageListContainer/>
                 </PostPageBody>
-            </ContainerHelper>
+            </ContainerHelper80>
         </section>
     )
 }
