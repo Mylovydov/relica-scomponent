@@ -5,7 +5,7 @@ import styled from 'styled-components';
 
 // Styled
 const StyledNotificationsPageBody = styled.div`
-    padding: 6rem 0 20rem;
+    padding: 6rem 0 13rem;
 
     >h1 {
         text-align: center;

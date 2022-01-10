@@ -6,7 +6,6 @@ import React, { FC } from 'react';
 
 // ComponentProps
 
-
-export const Contacts: FC = (props) => {
-   return <div {...props} />
+export const NavigationList: FC = (props) => {
+   return <ul {...props} />
 };

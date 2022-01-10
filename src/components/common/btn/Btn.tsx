@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import styled, { css } from 'styled-components';
+import styled from 'styled-components';
 import { baseTheme } from '../../../styles/theme';
 
 
@@ -87,9 +87,19 @@ interface BtnProps {
     as?: 'button' | 'div',
     btnVariant?: BtnVariants,
     height?: string
+    width?: string
 }
 
-export const Btn: FC<BtnProps> = ({type, as, height, btnVariant, children}) => {
+export const Btn: FC<BtnProps> = (
+    {
+        type, 
+        as, 
+        height, 
+        btnVariant, 
+        width,
+        children
+    }
+    ) => {
     return (
         <>
             <StyledBtn
@@ -97,6 +107,7 @@ export const Btn: FC<BtnProps> = ({type, as, height, btnVariant, children}) => {
                 as={as}
                 btnVariant={btnVariant}
                 height={height}
+                width={width}
             >
                 {children}
             </StyledBtn>

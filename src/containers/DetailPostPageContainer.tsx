@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { Container } from '../components/common/container/Container';
-import { ImageItem } from '../components/common/Image/ImageItem';
+import { ImageItem } from '../components/common/imageItem/ImageItem';
 import { Persone } from '../components/common/persone/Persone';
 import { CommentActionCard } from '../components/mainPages/detailPost/commentActionCard/CommentActionCard';
 import { CommentActionCardHeader } from '../components/mainPages/detailPost/commentActionCard/CommentActionCardHeader';

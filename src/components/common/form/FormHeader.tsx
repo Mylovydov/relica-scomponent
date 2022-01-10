@@ -5,23 +5,26 @@ import { baseTheme } from '../../../styles/theme';
 
 // StyledProps
 interface StyledFormHeaderProps {
-    mBottom?: string,
-    mBottomMedia?: string
+    margin?: string,
+    marginMd4Media?: string
+    maxWidth?: string
 }
 
 // Styled
 const StyledFormHeader = styled.div<StyledFormHeaderProps>`
-    margin-bottom: ${props => props.mBottom || '5.6rem'};
+    margin: ${({ margin = '0 0 5.6rem 0'}) => margin};
+    max-width: ${({ maxWidth }) => maxWidth};
 
     @media (max-width: ${baseTheme.media.md4}) {
-        margin-bottom: ${props => props.mBottomMedia || '4rem'};
+        margin: ${({ marginMd4Media = '0 0 4rem 0'}) => marginMd4Media};
     }
 `
 
 // ComponentProps
 interface FormHeaderProps {
-    mBottom?: string,
-    mBottomMedia?: string
+    margin?: string
+    marginMd4Media?: string
+    maxWidth?: string
 }
 
 

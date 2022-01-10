@@ -8,6 +8,7 @@ import { PostPage } from '../pages/postPage/PostPage';
 import { DetailPostPageContainer } from '../containers/DetailPostPageContainer';
 import { ExplorePage } from '../pages/explorePage/ExplorePage';
 import { NotificationsPage } from '../pages/notificationsPage/NotificationsPage';
+import { EditProfilePageContainer } from '../containers/EditProfileContainer';
 
 export const ChatRoutes: FC = () => {
    return (
@@ -19,6 +20,7 @@ export const ChatRoutes: FC = () => {
                <Route path='post-in-detail' element={<DetailPostPageContainer />}/>
                <Route path='explore' element={<ExplorePage />}/>
                <Route path='notifications' element={<NotificationsPage />}/>
+               <Route path='edit-profile' element={<EditProfilePageContainer />}/>
          </Route>
       </Routes>
    );

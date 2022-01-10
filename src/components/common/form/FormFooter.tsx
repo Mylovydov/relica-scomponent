@@ -5,11 +5,11 @@ import styled from 'styled-components';
 // StyledProps
 
 // Styled
-const StyledFormFooter = styled.div`
+// const StyledFormFooter = styled.div`
     
-`
+// `
 
 // ComponentProps
 export const FormFooter: FC = (props) => {
-    return <StyledFormFooter {...props}/>
+    return <div {...props}/>
 };

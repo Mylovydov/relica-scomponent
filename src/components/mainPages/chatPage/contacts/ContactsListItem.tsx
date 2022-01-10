@@ -10,7 +10,7 @@ import { MessagePrewievUnreadCount } from '../messagePrewiev/MessagePrewievUnrea
 
 
 // Styled
-const StyledContactsListItem = styled.li`
+export const StyledContactsListItem = styled.li`
     padding: 2.5rem 1.6rem;
     position: relative;
     transition: all .2s linear;

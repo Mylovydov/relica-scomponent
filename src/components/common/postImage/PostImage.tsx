@@ -3,7 +3,7 @@ import React, { FC } from 'react';
 import styled from 'styled-components';
 import { baseTheme } from '../../../styles/theme';
 import { Count } from '../count/Count';
-import { ImageItem } from '../Image/ImageItem';
+import { ImageItem } from '../imageItem/ImageItem';
 import { PostImageStatistics } from './PostImageStatistics';
 
 // StyledProps

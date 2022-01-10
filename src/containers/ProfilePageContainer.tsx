@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 
 import { Avatar } from '../components/common/avatar/Avatar';
-import { ImageItem } from '../components/common/Image/ImageItem';
+import { ImageItem } from '../components/common/imageItem/ImageItem';
 import { ContainerHelper80 } from '../components/common/containerHelper/ContainerHelper80';
 import { UserInfo } from '../components/mainPages/profilePage/userInfo/UserInfo';
 import { UserInfoAvatar } from '../components/mainPages/profilePage/userInfo/UserInfoAvatar';

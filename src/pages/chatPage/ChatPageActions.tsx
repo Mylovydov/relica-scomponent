@@ -13,6 +13,7 @@ const StyledChatPageActions = styled.div<StyledChatPageActionsProps>`
    border-left: .1rem solid ${({ theme }) => theme.colors.chatBorder};
    flex: ${({ flex = '0 0 37rem'}) => flex};
 `
+
 // ComponentProps
 
 export const ChatPageActions: FC = (props) => {

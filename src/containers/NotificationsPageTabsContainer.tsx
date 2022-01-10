@@ -26,6 +26,7 @@ import { TableHeaderItem } from '../components/mainPages/notificationsPage/table
 import { TableHeaderItemBody } from '../components/mainPages/notificationsPage/table/tableHeaderItem/TableHeaderItemBody';
 import { TableHeaderItemIcon } from '../components/mainPages/notificationsPage/table/tableHeaderItem/TableHeaderItemIcon';
 import { TableHeaderItemText } from '../components/mainPages/notificationsPage/table/tableHeaderItem/TableHeaderItemText';
+import { TableList } from '../components/mainPages/notificationsPage/table/tableList/TableList';
 import { TotalItem } from '../components/mainPages/notificationsPage/totalItem/TotalItem';
 import { StyledCaptionText, StyledTitleText } from '../components/typography/Typography1';
 
@@ -83,17 +84,51 @@ const activityPost = [
     },
 ]
 
+export type postStatisticsItem = {
+    postImage: string,
+    postLikes: string, likesEarned: string,
+    postComments: string, commentsEarned: string,
+    postFavourites: string, favouritesEarned: string
+}
+
 const statisticsItems = {
     totalStatisctics: {
-        totalEarned: '$5.00',
-        totalReferrals: '$5.00',
+        totalEarned: '$45.00',
+        totalReferrals: '$54.00',
         totalFollowers: '243'
-    }
+    },
+    postStatistics: [
+        {
+            postImage: '/assets/post-image/post-img-4.png',
+            postLikes: '32', likesEarned: '0.05',
+            postComments: '12', commentsEarned: '0.05',
+            postFavourites: '4', favouritesEarned: '0.05'
+        },
+        {
+            postImage: '/assets/post-image/post-img-3.webp',
+            postLikes: '54', likesEarned: '1.25',
+            postComments: '654', commentsEarned: '25',
+            postFavourites: '10', favouritesEarned: '43'
+        },
+        {
+            postImage: '/assets/post-image/post-img-2.jpg',
+            postLikes: '3', likesEarned: '0.32',
+            postComments: '34', commentsEarned: '2.5',
+            postFavourites: '1', favouritesEarned: '0'
+        },
+        {
+            postImage: '/assets/post-image/post-img-5.png',
+            postLikes: '3', likesEarned: '0.32',
+            postComments: '34', commentsEarned: '2.5',
+            postFavourites: '1', favouritesEarned: '0'
+        },
+    ]
 }
 
 export const NotificationsPageTabsContainer: FC = () => {
 
     const { totalEarned, totalReferrals, totalFollowers } = statisticsItems.totalStatisctics
+    const { postStatistics } = statisticsItems
 
     return (
         <Tabs>
@@ -109,13 +144,13 @@ export const NotificationsPageTabsContainer: FC = () => {
             </TabsControll>
 
             <TabsBody>
-                {/* <TabsItem>
+                <TabsItem>
                     <Activity>
                         <ActivityBody>
                             <ActivityList data={activityPost}/>
                         </ActivityBody>
                     </Activity>
-                </TabsItem> */}
+                </TabsItem>
 
                 <TabsItem>
                     <Income>
@@ -247,7 +282,7 @@ export const NotificationsPageTabsContainer: FC = () => {
                                         </TableHeader>
 
                                         <TableContent>
-
+                                            <TableList tableData={postStatistics}/>
                                         </TableContent>
                                     </TableBody>
                                 </Table>

@@ -6,7 +6,6 @@ import React, { FC } from 'react';
 
 // ComponentProps
 
-
-export const Contacts: FC = (props) => {
+export const EditProfile: FC = (props) => {
    return <div {...props} />
-};
+}

@@ -1,5 +1,8 @@
 import React, { FC } from 'react';
 
+import styled from 'styled-components';
+
+
 // StyledProps
 
 // Styled
@@ -7,6 +10,6 @@ import React, { FC } from 'react';
 // ComponentProps
 
 
-export const Contacts: FC = (props) => {
+export const TableItem: FC = (props) => {
    return <div {...props} />
 };
