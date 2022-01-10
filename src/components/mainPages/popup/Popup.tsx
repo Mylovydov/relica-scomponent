@@ -62,13 +62,13 @@ export const Popup: FC = () => {
 
                <PopupHeader>
                   <StyledTitleText
-                     as={'h4'}
-                     fontSize='2rem'
-                     md2FontSize={'2rem'}
-                     md3FontSize={'2rem'}
-                     md4FontSize={'2rem'}
-                  >
-                     Make a post
+						as={'h4'}
+						fontSize='2rem'
+						md2FontSize={'2rem'}
+						md3FontSize={'2rem'}
+						md4FontSize={'2rem'}
+					>
+						Make a post
                   </StyledTitleText>
 
                   <PopupCloseIcon>

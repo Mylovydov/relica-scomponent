@@ -30,6 +30,6 @@ interface EditProfileChangeIconProps {
    left?: string
 }
 
-export const EditProfileChangeIcon: FC<EditProfileChangeIconProps> = (props) => {
+export const AbsoluteIcon: FC<EditProfileChangeIconProps> = (props) => {
    return <StyledEditProfileChangePhotoIcon {...props} />
 };

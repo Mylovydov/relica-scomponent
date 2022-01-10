@@ -1,4 +1,5 @@
 import React from 'react';
+
 import styled, { css } from 'styled-components';
 
 interface TypographyProps {
@@ -16,7 +17,7 @@ const lineHeight = css`
 `
 
 export const StyledTitleText = styled.h1<TypographyProps>`
-    color: ${({ theme, ...props }) => props.color || theme.colors.black};
+    color: ${({ theme, color }) => color || theme.colors.black};
     font-weight: ${({ weight = '700' }) => weight};
     font-size: ${({ fontSize = '4rem' }) => fontSize};
     text-decoration: ${({ textDecor = 'none'}) => textDecor};

@@ -9,7 +9,6 @@ interface StyledFormBodyProps {
 // Styled
 const StyledFormBody = styled.div<StyledFormBodyProps>`
    margin: ${({ margin }) => margin};
-	border-bottom: .1rem solid ${({ theme }) => theme.colors.chatBorder};
 `
 // ComponentProps
 interface FormBodyProps {

@@ -8,7 +8,7 @@ import { EditProfile } from '../components/mainPages/editProfilePage/editProfile
 import { EditProfileAvatar } from '../components/mainPages/editProfilePage/editProfile/EditProfileAvatar';
 import { EditProfileAvatarWrapper } from '../components/mainPages/editProfilePage/editProfile/EditProfileAvatarWrapper';
 import { EditProfileBody } from '../components/mainPages/editProfilePage/editProfile/EditProfileBody';
-import { EditProfileChangeIcon } from '../components/mainPages/editProfilePage/editProfile/EditProfileChangeIcon';
+import { AbsoluteIcon } from '../components/common/absoluteIcon/AbsoluteIcon';
 import { EditProfileContent } from '../components/mainPages/editProfilePage/editProfile/EditProfileContent';
 import { EditProfileFooter } from '../components/mainPages/editProfilePage/editProfile/EditProfileFooter';
 import { EditProfileHeader } from '../components/mainPages/editProfilePage/editProfile/EditProfileHeader';
@@ -141,7 +141,7 @@ export const EditProfilePageContainer: FC = () => {
                               imgPath={'/assets/post-image/post-img-4.png'}
                               paddingBot={'24.85%'}
                            />
-                           <EditProfileChangeIcon
+                           <AbsoluteIcon
                               top={'1.6rem'}
                               right={'1.6rem'}
                            >
@@ -149,7 +149,7 @@ export const EditProfilePageContainer: FC = () => {
                                  imgSize={'4rem'}
                                  imagePath={'/assets/icons/changeBgPhoto.svg'}
                               />
-                           </EditProfileChangeIcon>
+                           </AbsoluteIcon>
                         </EditProfileContent>
 
                         <EditProfileAvatar>
@@ -158,7 +158,7 @@ export const EditProfilePageContainer: FC = () => {
                                  imgSize={'11.5rem'}
                                  imagePath={'/assets/chat-avatar/chat-avatar-1.webp'}
                               />
-                              <EditProfileChangeIcon
+                              <AbsoluteIcon
                                  bottom={'-1rem'}
                                  right={'-0.4rem'}
                               >
@@ -166,7 +166,7 @@ export const EditProfilePageContainer: FC = () => {
                                     imgSize={'4rem'}
                                     imagePath={'/assets/icons/changephoto.svg'}
                                  />
-                              </EditProfileChangeIcon>
+                              </AbsoluteIcon>
                            </EditProfileAvatarWrapper>
 
                            <StyledTitleText

@@ -35,14 +35,16 @@ export const EditProfileFormContainer: FC = () => {
          <FormFooter>
             <FormFooterWrapper>
                <Btn
-               children={'Discard changes'}
-               type={'reset'}
-               width={'18.5rem'}
+                  children={'Discard changes'}
+                  type={'reset'}
+                  width={'18.5rem'}
+                  height={'4.6rem'}
                />
                <Btn
                   children={'Save changes'}
                   btnVariant={BtnVariants.blue}
                   width={'18.5rem'}
+                  height={'4.6rem'}
                />
             </FormFooterWrapper>
          </FormFooter>
