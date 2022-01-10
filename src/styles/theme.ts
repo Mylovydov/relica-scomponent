@@ -14,6 +14,7 @@ export const baseTheme: Itheme = {
       red: '#FF5454',
       green: '#2DB922',
       lightGreen: '#56E3C8',
+      orange: '#E39578',
 
       tabsControlBrdr: '#D6D6D6',
 

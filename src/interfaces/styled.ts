@@ -11,6 +11,7 @@ export interface Itheme {
       red: string,
       green: string,
       lightGreen: string,
+      orange: string
 
       tabsControlBrdr: string,
 
