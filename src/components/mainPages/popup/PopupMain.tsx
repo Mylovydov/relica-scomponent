@@ -8,10 +8,6 @@ import styled from 'styled-components';
 
 // ComponentProps
 
-export const PopupMain: FC = () => {
-   return (
-      <div>
-         
-      </div>
-   );
+export const PopupMain: FC = (props) => {
+   return <div {...props} />
 };

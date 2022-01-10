@@ -63,7 +63,7 @@ interface InputProps {
    inputAutoComplete?: string,
    inputName: string,
    inputPlaceholder: string,
-   inputLabel: string,
+   inputLabel?: string,
    inpuType?: string
 }
 
@@ -84,14 +84,18 @@ export const InputItem: FC<InputProps> = (
                name={inputName}
                placeholder={inputPlaceholder}
             />
-            <StyledCaptionText
-               fontSize={'1.2rem'}
-               md2FontSize={'1.2rem'}
-               md3FontSize={'1.2rem'}
-               md4FontSize={'1.2rem'}
-            >
-               {inputLabel}
-            </StyledCaptionText>
+
+            {inputLabel &&
+               <StyledCaptionText
+                  fontSize={'1.2rem'}
+                  md2FontSize={'1.2rem'}
+                  md3FontSize={'1.2rem'}
+                  md4FontSize={'1.2rem'}
+               >
+                  {inputLabel}
+               </StyledCaptionText>
+            }
+
 
          </FormGroup>
       )

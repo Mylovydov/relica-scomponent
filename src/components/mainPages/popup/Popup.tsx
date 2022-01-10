@@ -1,12 +1,15 @@
 import React, { FC } from 'react';
 
 import styled from 'styled-components';
+import { PopupFormContainer } from '../../../containers/PopupFormContainer';
+
 import { Avatar } from '../../common/avatar/Avatar';
 import { StyledTitleText } from '../../typography/Typography1';
 import { PopupBody } from './PopupBody';
 import { PopupCloseIcon } from './PopupCloseIcon';
 import { PopupContent } from './PopupContent';
 import { PopupHeader } from './PopupHeader';
+import { PopupMain } from './PopupMain';
 
 // StyledProps
 
@@ -56,6 +59,7 @@ export const Popup: FC = () => {
       <StyledPopup>
          <PopupContent>
             <PopupBody>
+
                <PopupHeader>
                   <StyledTitleText
                      as={'h4'}
@@ -74,7 +78,10 @@ export const Popup: FC = () => {
                      />
                   </PopupCloseIcon>
                </PopupHeader>
-               
+
+               <PopupMain>
+                  <PopupFormContainer />
+               </PopupMain>
             </PopupBody>
          </PopupContent>
       </StyledPopup>
