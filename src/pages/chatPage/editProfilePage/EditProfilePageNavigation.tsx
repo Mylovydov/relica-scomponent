@@ -6,7 +6,9 @@ import styled from 'styled-components';
 
 // Styled
 const StyledEditProfilePageNavigation = styled.aside`
-   flex: 0 0 30rem;
+   position: fixed;
+   height: 100vh;
+   width: 30rem;
    border-right: 1px solid ${({ theme }) => theme.colors.chatBorder};
 `
 

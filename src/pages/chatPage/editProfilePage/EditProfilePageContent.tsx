@@ -6,9 +6,7 @@ import { baseTheme } from '../../../styles/theme';
 
 // Styled
 const StyledEditProfilePageContent = styled.div`
-   flex: 1 1 auto;
-   overflow-y: auto;
-   max-height: calc(100vh - ${baseTheme.sizes.headerHeigth}rem)
+   padding: 0 0 0 30rem;
 `
 // ComponentProps
 

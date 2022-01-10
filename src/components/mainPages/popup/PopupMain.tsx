@@ -5,11 +5,13 @@ import styled from 'styled-components';
 // StyledProps
 
 // Styled
-const StyledNavigation = styled.nav`
 
-`
 // ComponentProps
 
-export const Navigation: FC = (props) => {
-   return <StyledNavigation {...props} />
+export const PopupMain: FC = () => {
+   return (
+      <div>
+         
+      </div>
+   );
 };

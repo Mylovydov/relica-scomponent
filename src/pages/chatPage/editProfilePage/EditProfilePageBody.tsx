@@ -6,8 +6,6 @@ import styled from 'styled-components';
 
 // Styled
 const StyledEditProfilePageBody = styled.div`
-   display: flex;
-   min-height: calc(100vh - ${({ theme }) => theme.sizes.headerHeigth}rem);
 `
 // ComponentProps
 
