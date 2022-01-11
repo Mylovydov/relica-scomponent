@@ -88,7 +88,7 @@ interface BtnProps {
     btnVariant?: BtnVariants,
     height?: string
     width?: string
-    cB?:  MouseEventHandler
+    event?:  MouseEventHandler 
 }
 
 export const Btn: FC<BtnProps> = (
@@ -98,7 +98,7 @@ export const Btn: FC<BtnProps> = (
         height, 
         btnVariant, 
         width,
-        cB,
+        event,
         children
     }
     ) => {
@@ -110,7 +110,7 @@ export const Btn: FC<BtnProps> = (
                 btnVariant={btnVariant}
                 height={height}
                 width={width}
-                onClick={cB}
+                onClick={event}
             >
                 {children}
             </StyledBtn>

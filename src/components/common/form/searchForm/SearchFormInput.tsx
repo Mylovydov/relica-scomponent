@@ -1,4 +1,5 @@
-import React, { FC } from 'react';
+import React, {FC, useState } from 'react';
+
 import styled from 'styled-components';
 
 
@@ -34,8 +35,10 @@ const StyledSearchFormInput = styled.input<StyledSearchFormInputProps>`
       font-weight: 400;
    }
 `
+
 // ComponentProps
 interface SearchFormInputProps {
+   onUpdateSearch: () => void
    searchInputName: string,
    autoComplete?: string,
    color?: string,
@@ -48,19 +51,35 @@ interface SearchFormInputProps {
 
 export const SearchFormInput: FC<SearchFormInputProps> = (
    {
+      onUpdateSearch,
+
       searchInputName,
       placeholder,
       autoComplete = 'off',
       ...props
    }
    ) => {
+
+      const [term, setTerm] = useState('')
+
+      const onUpdateSearchFormInput = (event: React.ChangeEvent<HTMLInputElement>): void => {
+         console.log(event.currentTarget.value);
+         
+         const term = event.currentTarget.value
+         setTerm(term)
+         onUpdateSearch(term)
+      }
+
    return (
-      <StyledSearchFormInput 
+      <StyledSearchFormInput
+         onChange={onUpdateSearchFormInput}
+
          {...props}
          type='text'
          name={searchInputName}
          autoComplete={autoComplete}
          placeholder={placeholder}
+         value={term}
       />
    )
 };

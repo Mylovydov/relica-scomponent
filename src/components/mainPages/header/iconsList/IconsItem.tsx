@@ -41,7 +41,7 @@ export const IconsItem: FC<IconsItemProps> = (
 ) => {
    return (
       <StyledIconsItem>
-         <Link to={''}>
+         <Link to={to}>
             {notification && <span/>}
             <img src={imgPath} alt={imgAlt}/>
          </Link>

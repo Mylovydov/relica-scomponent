@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, MouseEventHandler } from 'react';
 
 import styled from 'styled-components';
 
@@ -16,7 +16,10 @@ const StyledPopupCloseIcon = styled.div`
    transform: translateY(-50%);
 `
 // ComponentProps
+interface PopupCloseIconProps {
+   action: MouseEventHandler
+}
 
-export const PopupCloseIcon: FC = (props) => {
-   return <StyledPopupCloseIcon {...props} />
+export const PopupCloseIcon: FC<PopupCloseIconProps> = ({action, ...props}) => {
+   return <StyledPopupCloseIcon {...props} onClick={action}/>
 };

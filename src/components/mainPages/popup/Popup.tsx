@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react';
+import React, { FC, MouseEventHandler, useState } from 'react';
 
 import styled from 'styled-components';
 import { PopupFormContainer } from '../../../containers/PopupFormContainer';
@@ -23,7 +23,6 @@ const StyledPopup = styled.div`
 	width: 100%;
 	height: 100%;
 	transition: visibility 0.8s ease 0s;
-	/* visibility: hidden; */
 
 	&::before {
 		content: "";
@@ -33,36 +32,34 @@ const StyledPopup = styled.div`
 		height: 100%;
 		top: 0;
 		left: 0;
-		/* opacity: 0; */
 		opacity: 1;
 		transition: opacity 0.8s ease 0s;
 	}
-
-   /* &._active {
-		overflow: auto;
-		visibility: visible;
-
-		&::before {
-			opacity: 1;
-		}
-
-		.popup__body {
-			transition: all 0.3s ease 0.2s;
-			transform: scale(1);
-		}
-	} */
 `
+
+// const StyledPopupBlur = styled.div`
+// 	background-color: #00000052;
+// 	position: absolute;
+// 	width: 100%;
+// 	height: 100%;
+// 	top: 0;
+// 	left: 0;
+// 	z-index: 50;
+// 	opacity: 1;
+// 	transition: opacity 0.8s ease 0s;
+// `
+
 // ComponentProps
 interface PopupProps {
-	status: boolean
+	modalStatus: boolean
+	onToggleModal: MouseEventHandler
 }
 
-export const Popup: FC<PopupProps> = ({ status }) => {
 
-
-   return (
+export const Popup: FC<PopupProps> = ({modalStatus, onToggleModal}) => {
+	return (
 		<>
-			{status &&
+			{modalStatus &&
 				<StyledPopup>
 					<PopupContent>
 						<PopupBody>
@@ -78,7 +75,9 @@ export const Popup: FC<PopupProps> = ({ status }) => {
 								Make a post
 								</StyledTitleText>
 
-								<PopupCloseIcon>
+								<PopupCloseIcon
+									action={onToggleModal}
+								>
 									<Avatar
 										imgSize={'2rem'}
 										imagePath={'/assets//icons/e-remove.svg'}
@@ -95,5 +94,5 @@ export const Popup: FC<PopupProps> = ({ status }) => {
 			}
 		</>
 		
-   );
+	);
 };

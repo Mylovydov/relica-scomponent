@@ -28,11 +28,10 @@ import { Popup } from '../components/mainPages/popup/Popup';
 
 export const HeaderMainContainer: FC = () => {
 
-   const [openStatus, setOpenStatus] = useState(false)
+   const [modalStatus, setModalStatus] = useState(false)
 
-   const hendlerToggle = () => {
-      console.log('click');
-      setOpenStatus(!openStatus)
+   const onToggleModal = () => {
+      setModalStatus(!modalStatus)
    }
 
    return (
@@ -63,7 +62,7 @@ export const HeaderMainContainer: FC = () => {
                      <ActionsHeader>
                         <ActionsHeaderButton>
                            <Btn
-                              cB={hendlerToggle}
+                              event={onToggleModal}
                               children={'Make a post'}
                               btnVariant={BtnVariants.blue}
                               height={'2.8em'}
@@ -72,16 +71,16 @@ export const HeaderMainContainer: FC = () => {
                         <ActionsHeaderIcons>
                            <IconsList>
                               <IconsItem
-                                 to={'#'}
+                                 to={'explore'}
                                  imgPath={"/assets/icons/zoom.svg"}
                               />
                               <IconsItem
-                                 to={'#'}
+                                 to={'notifications'}
                                  imgPath={"/assets/icons/alarm.svg"}
                                  notification
                               />
                               <IconsItem
-                                 to={'#'}
+                                 to={'chat'}
                                  imgPath={"/assets/icons/bubble-speak.svg"}
                                  notification
                               />
@@ -112,7 +111,7 @@ export const HeaderMainContainer: FC = () => {
                </HeaderBody>
             </Container>
          </Header>
-         <Popup status={openStatus}/>
+         <Popup modalStatus={modalStatus} onToggleModal={onToggleModal}/>
       </>
       
    );

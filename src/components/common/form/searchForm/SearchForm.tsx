@@ -1,10 +1,12 @@
-import React, { FC } from 'react';
+import React, { FC, useState,  } from 'react';
+
 import styled from 'styled-components';
 
 import { SearchFormIcon } from './SearchFormIcon';
 import { SearchFormItem } from './SearchFormItem';
 import { SearchFormBtn } from './SearchFormBtn';
 import { SearchFormInput } from './SearchFormInput';
+
 
 // StyledProps
 
@@ -15,20 +17,24 @@ const StyledSearchForm = styled.div`
 `
 // ComponentProps
 interface SearchFormProps {
-   dispalyIcon?: string,
-   searchItemMaxW?: string,
-   searchInputName: string,
-   autoComplete?: string,
-   color?: string,
-   height?: string,
-   fSize?: string,
-   placeholder: string,
-   placeholderFz?: string,
+   action: () => void
+
+   dispalyIcon?: string
+   searchItemMaxW?: string
+   searchInputName: string
+   autoComplete?: string
+   color?: string
+   height?: string
+   fSize?: string
+   placeholder: string
+   placeholderFz?: string
    placeholderColor?: string
 }
 
 export const SearchForm: FC<SearchFormProps> = (
    {
+      action,
+
       dispalyIcon,
       searchItemMaxW,
       searchInputName,
@@ -41,12 +47,14 @@ export const SearchForm: FC<SearchFormProps> = (
       placeholderColor
    }
 ) => {
+
    return (
       <StyledSearchForm>
          <SearchFormIcon display={dispalyIcon}/>
          <SearchFormItem maxWidth={searchItemMaxW}>
-            <SearchFormBtn/>
+            {/* <SearchFormBtn/> */}
             <SearchFormInput
+               onUpdateSearch={action}
                searchInputName={searchInputName}
                autoComplete={autoComplete}
                color={color}
