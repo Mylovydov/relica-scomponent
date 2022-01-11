@@ -31,7 +31,7 @@ export const CommentsItem: FC<CommentsItemProps> = (
    {
       margin,
       name,
-      userComment,
+      userComment
    }
 ) => {
    return (

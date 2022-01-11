@@ -17,9 +17,9 @@ type dataItem = {
 // StyledProps
 
 // Styled
-const StyledPostsList = styled.ul`
+// const StyledPostsList = styled.ul`
    
-`
+// `
 // ComponentProps
 interface PostsListProps {
    dataItems: dataItem[]
@@ -31,8 +31,8 @@ export const PostsList: FC<PostsListProps> = ({dataItems}) => {
    })
 
    return (
-      <StyledPostsList>
+      <ul>
          {PostsListItem}
-      </StyledPostsList>
+      </ul>
    )
 };

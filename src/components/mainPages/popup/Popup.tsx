@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useState } from 'react';
 
 import styled from 'styled-components';
 import { PopupFormContainer } from '../../../containers/PopupFormContainer';
@@ -53,37 +53,47 @@ const StyledPopup = styled.div`
 	} */
 `
 // ComponentProps
+interface PopupProps {
+	status: boolean
+}
 
-export const Popup: FC = () => {
+export const Popup: FC<PopupProps> = ({ status }) => {
+
+
    return (
-      <StyledPopup>
-         <PopupContent>
-            <PopupBody>
+		<>
+			{status &&
+				<StyledPopup>
+					<PopupContent>
+						<PopupBody>
 
-               <PopupHeader>
-                  <StyledTitleText
-						as={'h4'}
-						fontSize='2rem'
-						md2FontSize={'2rem'}
-						md3FontSize={'2rem'}
-						md4FontSize={'2rem'}
-					>
-						Make a post
-                  </StyledTitleText>
+							<PopupHeader>
+								<StyledTitleText
+								as={'h4'}
+								fontSize='2rem'
+								md2FontSize={'2rem'}
+								md3FontSize={'2rem'}
+								md4FontSize={'2rem'}
+							>
+								Make a post
+								</StyledTitleText>
 
-                  <PopupCloseIcon>
-                     <Avatar
-                        imgSize={'2rem'}
-                        imagePath={'/assets//icons/e-remove.svg'}
-                     />
-                  </PopupCloseIcon>
-               </PopupHeader>
+								<PopupCloseIcon>
+									<Avatar
+										imgSize={'2rem'}
+										imagePath={'/assets//icons/e-remove.svg'}
+									/>
+								</PopupCloseIcon>
+							</PopupHeader>
 
-               <PopupMain>
-                  <PopupFormContainer />
-               </PopupMain>
-            </PopupBody>
-         </PopupContent>
-      </StyledPopup>
+							<PopupMain>
+								<PopupFormContainer />
+							</PopupMain>
+						</PopupBody>
+					</PopupContent>
+				</StyledPopup>
+			}
+		</>
+		
    );
 };

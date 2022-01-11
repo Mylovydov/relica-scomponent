@@ -16,7 +16,7 @@ export const ChatLayout: FC = () => {
                     <Outlet/>
                 </Content>
             </Wrapper>
-            <Popup/>
+            {/* <Popup/> */}
         </>
 
         

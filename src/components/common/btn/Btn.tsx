@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, MouseEventHandler, TouchEventHandler } from 'react';
 import styled from 'styled-components';
 import { baseTheme } from '../../../styles/theme';
 
@@ -88,6 +88,7 @@ interface BtnProps {
     btnVariant?: BtnVariants,
     height?: string
     width?: string
+    cB?:  MouseEventHandler
 }
 
 export const Btn: FC<BtnProps> = (
@@ -97,6 +98,7 @@ export const Btn: FC<BtnProps> = (
         height, 
         btnVariant, 
         width,
+        cB,
         children
     }
     ) => {
@@ -108,6 +110,7 @@ export const Btn: FC<BtnProps> = (
                 btnVariant={btnVariant}
                 height={height}
                 width={width}
+                onClick={cB}
             >
                 {children}
             </StyledBtn>
