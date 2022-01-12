@@ -2,7 +2,6 @@ import React, {FC, useState } from 'react';
 
 import styled from 'styled-components';
 
-
 // StyledProps
 interface StyledSearchFormInputProps {
    color?: string,
@@ -38,7 +37,6 @@ const StyledSearchFormInput = styled.input<StyledSearchFormInputProps>`
 
 // ComponentProps
 interface SearchFormInputProps {
-   onUpdateSearch: () => void
    searchInputName: string,
    autoComplete?: string,
    color?: string,
@@ -51,8 +49,6 @@ interface SearchFormInputProps {
 
 export const SearchFormInput: FC<SearchFormInputProps> = (
    {
-      onUpdateSearch,
-
       searchInputName,
       placeholder,
       autoComplete = 'off',
@@ -67,7 +63,7 @@ export const SearchFormInput: FC<SearchFormInputProps> = (
          
          const term = event.currentTarget.value
          setTerm(term)
-         onUpdateSearch(term)
+         // onUpdateSearch(term)
       }
 
    return (

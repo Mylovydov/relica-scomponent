@@ -24,18 +24,12 @@ import { SubmenuList } from '../components/mainPages/header/submenu/SubmenuList'
 import { ProfileHeaderSubmenu } from '../components/mainPages/header/profileHeader/ProfileHeaderSubmenu';
 import { SubmenuItem } from '../components/mainPages/header/submenu/SubmenuItem';
 import { Popup } from '../components/mainPages/popup/Popup';
+import { ModalProvider } from '../context/ModalContext'
 
 
 export const HeaderMainContainer: FC = () => {
-
-   const [modalStatus, setModalStatus] = useState(false)
-
-   const onToggleModal = () => {
-      setModalStatus(!modalStatus)
-   }
-
    return (
-      <>
+      <ModalProvider>
          <Header>
             <Container>
                <HeaderBody>
@@ -62,7 +56,6 @@ export const HeaderMainContainer: FC = () => {
                      <ActionsHeader>
                         <ActionsHeaderButton>
                            <Btn
-                              event={onToggleModal}
                               children={'Make a post'}
                               btnVariant={BtnVariants.blue}
                               height={'2.8em'}
@@ -111,8 +104,8 @@ export const HeaderMainContainer: FC = () => {
                </HeaderBody>
             </Container>
          </Header>
-         <Popup modalStatus={modalStatus} onToggleModal={onToggleModal}/>
-      </>
+         <Popup/>
+      </ModalProvider>
       
    );
 };

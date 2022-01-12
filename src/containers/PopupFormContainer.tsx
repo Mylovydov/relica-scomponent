@@ -71,9 +71,9 @@ export const PopupFormContainer: FC = () => {
                               <StyledTitleText
                                  as={'span'}
                                  fontSize={'1.8rem'}
-                                 md2FontSize={''}
-                                 md3FontSize={''}
-                                 md4FontSize={''}
+                                 md2FontSize={'1.8rem'}
+                                 md3FontSize={'1.8rem'}
+                                 md4FontSize={'1.8rem'}
                                  color={baseTheme.colors.primary}
                               >
                                  Upload photo

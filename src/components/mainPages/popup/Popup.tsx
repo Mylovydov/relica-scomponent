@@ -1,7 +1,8 @@
-import React, { FC, MouseEventHandler, useState } from 'react';
+import React, { FC, MouseEventHandler } from 'react';
 
 import styled from 'styled-components';
 import { PopupFormContainer } from '../../../containers/PopupFormContainer';
+import { useModal } from '../../../context/ModalContext';
 
 import { Avatar } from '../../common/avatar/Avatar';
 import { StyledTitleText } from '../../typography/Typography1';
@@ -16,16 +17,17 @@ import { PopupMain } from './PopupMain';
 // Styled
 const StyledPopup = styled.div`
 	z-index: 100;
-	padding: 3rem 1rem;
+	/* padding: 3rem 1rem; */
 	position: fixed;
-	top: 0px;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	top: 50%;
+	left: 50%;
+	/* width: 100%; */
+	/* height: 100%; */
 	transition: visibility 0.8s ease 0s;
+	transform: translate3d(-50%, -50%, 0);
 
 	&::before {
-		content: "";
+		/* content: "";
 		background-color: #00000052;
 		position: fixed;
 		width: 100%;
@@ -33,66 +35,66 @@ const StyledPopup = styled.div`
 		top: 0;
 		left: 0;
 		opacity: 1;
-		transition: opacity 0.8s ease 0s;
+		transition: opacity 0.8s ease 0s; */
 	}
 `
 
-// const StyledPopupBlur = styled.div`
-// 	background-color: #00000052;
-// 	position: absolute;
-// 	width: 100%;
-// 	height: 100%;
-// 	top: 0;
-// 	left: 0;
-// 	z-index: 50;
-// 	opacity: 1;
-// 	transition: opacity 0.8s ease 0s;
-// `
+const StyledPopupBlur = styled.div`
+	background-color: #00000052;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 50;
+	opacity: 1;
+	transition: opacity 0.8s ease 0s;
+`
 
 // ComponentProps
-interface PopupProps {
-	modalStatus: boolean
-	onToggleModal: MouseEventHandler
-}
 
 
-export const Popup: FC<PopupProps> = ({modalStatus, onToggleModal}) => {
+export const Popup: FC = () => {
+
+	const { visible, toggle } = useModal()
+
+	if (!visible) return null
+
 	return (
 		<>
-			{modalStatus &&
-				<StyledPopup>
-					<PopupContent>
-						<PopupBody>
+			<StyledPopup>
+				<PopupContent>
+					<PopupBody>
 
-							<PopupHeader>
-								<StyledTitleText
-								as={'h4'}
-								fontSize='2rem'
-								md2FontSize={'2rem'}
-								md3FontSize={'2rem'}
-								md4FontSize={'2rem'}
+						<PopupHeader>
+							<StyledTitleText
+							as={'h4'}
+							fontSize='2rem'
+							md2FontSize={'2rem'}
+							md3FontSize={'2rem'}
+							md4FontSize={'2rem'}
+						>
+							Make a post
+							</StyledTitleText>
+
+							<PopupCloseIcon
 							>
-								Make a post
-								</StyledTitleText>
+								<Avatar
+									imgSize={'2rem'}
+									imagePath={'/assets/icons/e-remove.svg'}
+								/>
+							</PopupCloseIcon>
+						</PopupHeader>
 
-								<PopupCloseIcon
-									action={onToggleModal}
-								>
-									<Avatar
-										imgSize={'2rem'}
-										imagePath={'/assets//icons/e-remove.svg'}
-									/>
-								</PopupCloseIcon>
-							</PopupHeader>
-
-							<PopupMain>
-								<PopupFormContainer />
-							</PopupMain>
-						</PopupBody>
-					</PopupContent>
-				</StyledPopup>
-			}
+						<PopupMain>
+							<PopupFormContainer />
+						</PopupMain>
+					</PopupBody>
+				</PopupContent>
+			</StyledPopup>
+			<StyledPopupBlur onClick={toggle}/>
 		</>
+
 		
 	);
 };

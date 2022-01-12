@@ -1,5 +1,6 @@
 import React, { FC, MouseEventHandler, TouchEventHandler } from 'react';
 import styled from 'styled-components';
+import { useModal } from '../../../context/ModalContext';
 import { baseTheme } from '../../../styles/theme';
 
 
@@ -88,7 +89,6 @@ interface BtnProps {
     btnVariant?: BtnVariants,
     height?: string
     width?: string
-    event?:  MouseEventHandler 
 }
 
 export const Btn: FC<BtnProps> = (
@@ -98,19 +98,21 @@ export const Btn: FC<BtnProps> = (
         height, 
         btnVariant, 
         width,
-        event,
         children
     }
     ) => {
+
+        const { toggle } = useModal()
+
     return (
         <>
             <StyledBtn
+                onClick={toggle}
                 type={type}
                 as={as}
                 btnVariant={btnVariant}
                 height={height}
                 width={width}
-                onClick={event}
             >
                 {children}
             </StyledBtn>

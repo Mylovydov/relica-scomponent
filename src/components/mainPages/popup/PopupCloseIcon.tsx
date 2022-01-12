@@ -1,6 +1,7 @@
-import React, { FC, MouseEventHandler } from 'react';
+import React, { FC} from 'react';
 
 import styled from 'styled-components';
+import { useModal } from '../../../context/ModalContext';
 
 // StyledProps
 
@@ -16,10 +17,9 @@ const StyledPopupCloseIcon = styled.div`
    transform: translateY(-50%);
 `
 // ComponentProps
-interface PopupCloseIconProps {
-   action: MouseEventHandler
-}
 
-export const PopupCloseIcon: FC<PopupCloseIconProps> = ({action, ...props}) => {
-   return <StyledPopupCloseIcon {...props} onClick={action}/>
+export const PopupCloseIcon: FC = (props) => {
+   const { toggle } = useModal()
+
+   return <StyledPopupCloseIcon {...props} onClick={toggle}/>
 };

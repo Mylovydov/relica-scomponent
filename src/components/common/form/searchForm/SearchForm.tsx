@@ -4,9 +4,8 @@ import styled from 'styled-components';
 
 import { SearchFormIcon } from './SearchFormIcon';
 import { SearchFormItem } from './SearchFormItem';
-import { SearchFormBtn } from './SearchFormBtn';
 import { SearchFormInput } from './SearchFormInput';
-
+import { SearchFormBtn } from './SearchFormBtn';
 
 // StyledProps
 
@@ -17,7 +16,6 @@ const StyledSearchForm = styled.div`
 `
 // ComponentProps
 interface SearchFormProps {
-   action: () => void
 
    dispalyIcon?: string
    searchItemMaxW?: string
@@ -33,8 +31,6 @@ interface SearchFormProps {
 
 export const SearchForm: FC<SearchFormProps> = (
    {
-      action,
-
       dispalyIcon,
       searchItemMaxW,
       searchInputName,
@@ -52,9 +48,8 @@ export const SearchForm: FC<SearchFormProps> = (
       <StyledSearchForm>
          <SearchFormIcon display={dispalyIcon}/>
          <SearchFormItem maxWidth={searchItemMaxW}>
-            {/* <SearchFormBtn/> */}
+            <SearchFormBtn/>
             <SearchFormInput
-               onUpdateSearch={action}
                searchInputName={searchInputName}
                autoComplete={autoComplete}
                color={color}

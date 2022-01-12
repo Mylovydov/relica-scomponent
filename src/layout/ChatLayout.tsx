@@ -4,7 +4,6 @@ import { Outlet } from 'react-router-dom';
 
 import { Wrapper } from '../components/authPages/wrapper/Wrapper';
 import { Content } from '../components/mainPages/Content';
-import { Popup } from '../components/mainPages/popup/Popup';
 import { HeaderMainContainer } from '../containers/HeaderMainContainer'; 
 
 export const ChatLayout: FC = () => {
@@ -16,7 +15,6 @@ export const ChatLayout: FC = () => {
                     <Outlet/>
                 </Content>
             </Wrapper>
-            {/* <Popup/> */}
         </>
 
         
